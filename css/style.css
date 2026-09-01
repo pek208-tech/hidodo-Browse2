@@ -1,0 +1,1699 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 30px;
+}
+
+body {
+  margin: 0;
+  color: #111;
+  background: #fff;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.mo-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+  .mo-only {
+    display: block;
+  }
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  background: url("../images/hero-bg.png") center/1920px auto no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
+}
+.hero__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__stage {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 1000px;
+}
+.hero__inner {
+  position: relative;
+  z-index: 10;
+  width: min(760px, 100%);
+  text-align: center;
+}
+.hero__brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.hero__logo {
+  width: clamp(130px, 11vw, 210px);
+  height: auto;
+}
+.hero__title {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+.hero__title-main, .hero__title-gradient {
+  display: block;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.hero__title-main {
+  margin-bottom: 6px;
+  color: #111;
+  font-size: 68px;
+}
+.hero__title-gradient {
+  font-size: 68px;
+  background: linear-gradient(90deg, #367af5, #6444f5 38%, #e0528d 68%, #f58b17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.hero__keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 28px;
+}
+.hero__keyword {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #367af5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.hero__keyword--point {
+  background: #f58b17;
+}
+.hero .purple {
+  background: #6444f5;
+}
+.hero .pink {
+  background: #e0528d;
+}
+.hero .orange {
+  background: #f58b17;
+}
+.hero__description {
+  margin: 14px 0 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.28;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  gap: 16px;
+  min-width: 340px;
+  min-height: 72px;
+  margin-top: 44px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4930ef, #3f23dc);
+  box-shadow: 0 12px 28px rgba(73, 48, 239, 0.25);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hero__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(73, 48, 239, 0.32);
+  transform: translateX(4px);
+}
+.hero__cta:active {
+  transform: translateY(4px);
+}
+.hero__cta:focus-visible {
+  outline: 3px solid rgba(54, 122, 245, 0.4);
+  outline-offset: 5px;
+}
+.hero__cta-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s ease;
+}
+.hero__cta:hover .hero__cta-icon {
+  transform: translateX(4px);
+}
+.hero__caption {
+  margin: 14px 0 0;
+  color: #4d4d4d;
+  font-size: 16px;
+}
+.hero__visual {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  pointer-events: none;
+}
+.hero__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero__visual--movie {
+  width: 280px;
+  top: 190px;
+  margin-left: -620px;
+  animation: float-a 5s ease-in-out infinite;
+}
+.hero__visual--book {
+  width: 315px;
+  height: 254px;
+  top: 500px;
+  margin-left: -800px;
+  animation: float-b 5.7s ease-in-out infinite;
+}
+.hero__visual--game {
+  width: 160px;
+  top: 40px;
+  margin-left: 330px;
+  animation: float-c 5.3s ease-in-out infinite;
+}
+.hero__visual--studio {
+  width: 220px;
+  top: 240px;
+  margin-left: 520px;
+  animation: float-a 6.2s ease-in-out infinite reverse;
+}
+.hero__orbit {
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+}
+.hero__orbit path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.hero__orbit--left {
+  bottom: -130px;
+  left: -250px;
+  transform: rotate(-8deg);
+}
+.hero__orbit--right {
+  top: -110px;
+  right: -250px;
+  transform: rotate(170deg);
+}
+
+.js-hero-animation {
+  visibility: hidden;
+  opacity: 0;
+}
+.js-hero-animation.animate__animated {
+  visibility: visible;
+  opacity: 1;
+}
+
+.level {
+  padding: 130px 0px 260px;
+  overflow-x: clip;
+  overflow-y: visible;
+  isolation: isolate;
+  position: relative;
+}
+.level::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 80px);
+  bottom: -510px;
+  width: 2976px;
+  height: 1588px;
+  background: url("../images/choose-level-bg.png") center/contain no-repeat;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.level__inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.level__header {
+  margin-bottom: 64px;
+  text-align: center;
+}
+.level__title {
+  margin: 0;
+  color: #111;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 40px;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+}
+.level__title span {
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(90deg, #367af5, #6444f5 40%, #e0528d 70%, #f58b17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.level__description {
+  margin: 14px 0 0;
+  color: #333;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.level__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.level__item {
+  min-width: 0;
+  z-index: 1;
+}
+.level__item--alphabet .level-card {
+  border-color: #367af5;
+}
+.level__item--alphabet .level-card__label {
+  background: #367af5;
+}
+.level__item--alphabet .level-card__title, .level__item--alphabet .level-card__link {
+  color: #367af5;
+}
+.level__item--alphabet .level-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.level__item--phonics .level-card {
+  border-color: #e0528d;
+}
+.level__item--phonics .level-card__label {
+  background: #e0528d;
+}
+.level__item--phonics .level-card__title, .level__item--phonics .level-card__link {
+  color: #e0528d;
+}
+.level__item--phonics .level-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.level__item--words .level-card {
+  border-color: #f58b17;
+}
+.level__item--words .level-card__label {
+  background: #f58b17;
+}
+.level__item--words .level-card__title, .level__item--words .level-card__link {
+  color: #f58b17;
+}
+.level__item--words .level-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.level__item--alphabet, .level__item--phonics, .level__item--words {
+  box-shadow: 0 22px 45px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 36px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.level__item--alphabet:hover, .level__item--phonics:hover, .level__item--words:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 64px 10px rgba(0, 0, 0, 0.2);
+}
+
+.level-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+  padding: 62px 32px 40px;
+  overflow: hidden;
+  border: 2px solid;
+  border-radius: 36px;
+  background: #fff;
+  text-align: center;
+}
+.level-card__label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  min-width: 116px;
+  padding: 9px 18px;
+  transform: translateX(-50%);
+  border-radius: 0 0 12px 12px;
+  color: #fff;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+.level-card__title {
+  margin: 0;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 30px;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+.level-card__description {
+  margin: 16px 0 0;
+  color: #333;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+.level-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 260px;
+  margin-top: 24px;
+}
+.level-card__image img {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.level-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.level-card__link span {
+  font-size: 24px;
+  transition: transform 0.25s ease;
+}
+.level-card__link:hover {
+  transform: translateY(-2px);
+}
+.level-card__link:hover span {
+  transform: translateX(5px);
+}
+.level-card__link:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.trial-content {
+  position: relative;
+}
+
+.experience {
+  position: relative;
+  padding: 130px 0px 130px;
+  scroll-margin-top: 40px;
+  z-index: 3;
+}
+.experience .blue {
+  color: #367af5;
+}
+.experience .pink {
+  color: #e0528d;
+}
+.experience .orange {
+  color: #f58b17;
+}
+.experience__inner, .experience__rail {
+  position: relative;
+  z-index: 1;
+}
+.experience__inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  z-index: 3;
+}
+.experience__header {
+  margin-bottom: 52px;
+  text-align: center;
+}
+.experience__title {
+  margin: 0;
+  color: #111;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 40px;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+}
+.experience__title span {
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.experience__description {
+  margin: 12px 0 0;
+  color: #333;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.experience__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.experience__more {
+  margin-top: 74px;
+  margin-bottom: 20px;
+}
+.experience__more-title {
+  margin: 0;
+  color: #111;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 26px;
+  line-height: 1;
+}
+.experience__more-title span {
+  color: #367af5;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.experience__rail {
+  width: 100%;
+  margin-top: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.experience__rail::before, .experience__rail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 150px;
+  height: 113px;
+  pointer-events: none;
+}
+.experience__rail::before {
+  left: 0;
+  background: url("../images/gradation-l.png") left center/contain no-repeat;
+}
+.experience__rail::after {
+  right: 0;
+  background: url("../images/gradation-r.png") right center/contain no-repeat;
+}
+.experience__rail:hover .experience__rail-track {
+  animation-play-state: paused;
+}
+.experience__rail-track {
+  display: flex;
+  width: max-content;
+  animation: rail-scroll 60s linear infinite;
+  will-change: transform;
+}
+.experience__rail-set {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  padding-right: 20px;
+}
+.experience__rail-set img {
+  flex: 0 0 auto;
+  width: 190px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.experience__rail-set img:hover {
+  opacity: 1.03;
+  transform: scale(1.03);
+}
+@keyframes rail-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#phonics,
+#words {
+  position: relative;
+  overflow-x: clip;
+}
+#phonics::after,
+#words::after {
+  content: "";
+  position: absolute;
+  width: 2976px;
+  height: 1588px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#phonics::after {
+  left: calc(50% - 800px);
+  bottom: -400px;
+  background-image: url("../images/phonics-bg.png");
+}
+
+#words::after {
+  left: calc(50% + 800px);
+  bottom: -580px;
+  background-image: url("../images/word-bg.png");
+}
+
+.level,
+.trial-content,
+.experience {
+  background: transparent;
+}
+
+.learning-card {
+  overflow: hidden;
+  border-radius: 30px;
+  background: #fff;
+}
+.learning-card__thumb {
+  width: 100%;
+  aspect-ratio: 1.8/1;
+  overflow: hidden;
+}
+.learning-card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.learning-card__content {
+  padding: 26px 28px 28px;
+  text-align: center;
+}
+.learning-card__category {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+}
+.learning-card__title {
+  margin: 0;
+  color: #111;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 26px;
+  line-height: 1.3;
+}
+.learning-card__description {
+  margin: 7px 0 0;
+  color: #4d4d4d;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.learning-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: #111;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+}
+.learning-card__link span {
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+.learning-card__link:hover span {
+  transform: translateX(4px);
+}
+.learning-card__link:focus-visible {
+  outline: 3px solid rgba(54, 122, 245, 0.4);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.blue-shadow {
+  box-shadow: 0 8px 24px #d9e3fd;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.blue-shadow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #d9e3fd;
+}
+
+.pink-shadow {
+  box-shadow: 0 8px 24px #ffe9fc;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pink-shadow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #ffe9fc;
+}
+
+.orange-shadow {
+  box-shadow: 0 8px 24px #ffefdc;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.orange-shadow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #ffefdc;
+}
+
+.quick-wrap {
+  position: fixed;
+  z-index: 50;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transform: translateY(-50%) translateX(20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+.quick-wrap.is-visible {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.quick-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 6px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 20px rgba(40, 50, 100, 0.12);
+}
+.quick-menu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 76px;
+  padding: 10px 6px;
+  color: #4d4d4d;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.65;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: opacity 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+.quick-menu__item img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+.quick-menu__item[data-target=alphabet].is-active {
+  background: #367af5;
+  opacity: 1;
+  color: #fff;
+}
+.quick-menu__item[data-target=phonics].is-active {
+  background: #e0528d;
+  opacity: 1;
+  color: #fff;
+}
+.quick-menu__item[data-target=words].is-active {
+  background: #f58b17;
+  opacity: 1;
+  color: #fff;
+}
+
+.quick-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #4930ef;
+  color: #fff;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(73, 48, 239, 0.25);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.quick-top:hover {
+  transform: translateY(-3px);
+}
+.quick-top:focus-visible {
+  outline: 3px solid rgba(54, 122, 245, 0.4);
+  outline-offset: 4px;
+}
+
+.cta-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 0px 180px;
+  overflow: hidden;
+  z-index: 3;
+  background: radial-gradient(circle at 50% 18%, rgb(43, 21, 191) 0%, rgb(29, 19, 105) 38%, rgb(27, 27, 34) 72%, rgb(30, 30, 30) 100%);
+  color: #fff;
+}
+.cta-section__inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+}
+.cta-section__title {
+  margin: 0;
+  color: #fff;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 56px;
+  line-height: 1.4;
+  letter-spacing: -0.045em;
+}
+.cta-section__title span {
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(90deg, #367af5, #6444f5 42%, #e0528d 70%, #f58b17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.cta-section__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-width: 316px;
+  min-height: 74px;
+  margin-top: 32px;
+  padding: 0 34px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(#21176f, #21176f) padding-box, linear-gradient(90deg, #367af5, #6444f5, #e0528d, #f58b17) border-box;
+  color: #fff;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cta-section__button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+.cta-section__button:hover .cta-section__button-arrow {
+  transform: translateX(4px);
+}
+.cta-section__button:focus-visible {
+  outline: 3px solid rgba(54, 122, 245, 0.5);
+  outline-offset: 5px;
+}
+.cta-section__button-arrow {
+  display: inline-block;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+.cta-section__visual {
+  width: 642px;
+  margin: 52px auto 0;
+}
+.cta-section__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  border-radius: 26px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+.cta-section__description {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 24px;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+}
+.cta-section__description strong {
+  background: linear-gradient(90deg, #7b68ff, #d9d3ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.bottom-banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  margin: 0 auto;
+  width: 1160px;
+  height: 80px;
+}
+.bottom-banner__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 0 40px;
+  border-radius: 30px 30px 0 0;
+  color: #fff;
+  text-decoration: none;
+}
+.bottom-banner__item--trial {
+  background: linear-gradient(110deg, #d93e98 0%, #8c24c8 55%, #6321d0 100%);
+}
+.bottom-banner__item--preview {
+  background: linear-gradient(110deg, #cadcff 0%, #d8d8ff 50%, #cabaff 100%);
+  color: #111;
+}
+.bottom-banner__text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.bottom-banner__title {
+  display: block;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin-top: 12px;
+}
+.bottom-banner__title em {
+  font-style: normal;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.bottom-banner__item--trial .bottom-banner__title em {
+  color: #fff36a;
+}
+.bottom-banner__item--preview .bottom-banner__title em {
+  background: linear-gradient(90deg, #367af5, #6444f5, #f58b17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.bottom-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+.bottom-banner__link span {
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+.bottom-banner__character {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  width: auto;
+  max-height: 85px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.bottom-banner__item:hover .bottom-banner__link span {
+  transform: translateX(4px);
+}
+
+@keyframes rail-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes float-a {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes float-b {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-1.5deg);
+  }
+}
+@keyframes float-c {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@media (max-width: 1440px) {
+  .hero {
+    background: url("../images/hero-bg.png") center/cover no-repeat;
+  }
+  .hero__stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 820px;
+  }
+  .hero__visual--movie {
+    width: 260px;
+    margin-left: -500px;
+    top: 180px;
+  }
+  .hero__visual--book {
+    width: 300px;
+    margin-left: -610px;
+    top: 400px;
+  }
+  .hero__visual--game {
+    width: 180px;
+    margin-left: 260px;
+    top: 30px;
+  }
+  .hero__visual--studio {
+    width: 240px;
+    margin-left: 400px;
+    top: 210px;
+  }
+  .level {
+    padding: 100px 0px 240px;
+  }
+  .level::after {
+    left: calc(50% - 120px);
+    bottom: -500px;
+    width: 2976px;
+    height: 1588px;
+  }
+  .level__inner {
+    max-width: 1000px;
+  }
+  .level__description {
+    margin: 10px 0 0;
+  }
+  .level__list {
+    gap: 20px;
+  }
+  .level-card {
+    min-height: 520px;
+  }
+  .level-card__image {
+    height: 180px;
+    margin-top: 28px;
+  }
+  .experience {
+    padding: 100px 0px 100px;
+  }
+  .experience__inner {
+    max-width: 1000px;
+  }
+  .experience__rail-set img {
+    width: 160px;
+  }
+  .experience__cards {
+    gap: 18px;
+  }
+  #phonics::after,
+  #words::after {
+    width: 2044px;
+    height: 1053px;
+  }
+  #phonics::after {
+    left: calc(50% - 800px);
+    bottom: -300px;
+  }
+  #words::after {
+    left: calc(50% + 800px);
+    bottom: -380px;
+  }
+  .quick-wrap {
+    right: 5px;
+  }
+  .cta-section {
+    padding: 100px 0px 140px;
+  }
+  .cta-section__inner {
+    max-width: 1000px;
+  }
+  .bottom-banner {
+    width: 1000px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero__stage {
+    min-height: 780px;
+  }
+  .hero__visual--movie {
+    width: 240px;
+    margin-left: -460px;
+    top: 180px;
+  }
+  .hero__visual--book {
+    width: 280px;
+    margin-left: -570px;
+    top: 380px;
+  }
+  .hero__visual--game {
+    width: 160px;
+    margin-left: 200px;
+    top: 30px;
+  }
+  .hero__visual--studio {
+    width: 220px;
+    margin-left: 340px;
+    top: 210px;
+  }
+  .hero__title-main, .hero__title-gradient {
+    font-size: 56px;
+  }
+  .hero__keyword {
+    font-size: 14px;
+  }
+  .hero__description {
+    font-size: 20px;
+  }
+  .hero__cta {
+    font-size: 18px;
+  }
+  .level {
+    padding: 70px 0px 240px;
+  }
+  .level::after {
+    left: calc(50% - 100px);
+    bottom: -420px;
+    width: 2776px;
+    height: 1388px;
+  }
+  .level__inner {
+    max-width: 1000px;
+  }
+  .level__description {
+    margin: 10px 0 0;
+  }
+  .level__inner {
+    max-width: 900px;
+  }
+  .level__title {
+    font-size: 36px;
+  }
+  .level__description {
+    font-size: 20px;
+  }
+  .level__list {
+    gap: 10px;
+  }
+  .level-card {
+    min-height: 460px;
+  }
+  .level-card__image {
+    height: 160px;
+    margin-top: 10px;
+  }
+  .level-card__title {
+    font-size: 24px;
+  }
+  .level-card__description {
+    font-size: 14px;
+  }
+  .level-card__link {
+    font-size: 14px;
+  }
+  .level-card__label {
+    padding: 6px 15px;
+    font-size: 11px;
+  }
+  .level-card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+  }
+  .second-line {
+    display: none;
+  }
+  .experience {
+    padding: 70px 0px 70px;
+  }
+  .experience__inner {
+    max-width: 900px;
+  }
+  .experience__cards {
+    gap: 18px;
+  }
+  .experience__rail {
+    margin-top: 8px;
+  }
+  .experience__rail::before, .experience__rail::after {
+    height: 73px;
+  }
+  .experience__title {
+    font-size: 36px;
+  }
+  .experience__description {
+    margin: 6px 0 0;
+    font-size: 18px;
+  }
+  .experience__more-title {
+    font-size: 22px;
+  }
+  .experience__rail-set {
+    gap: 10px;
+  }
+  .experience__rail-set img {
+    width: 130px;
+  }
+  .experience__header {
+    margin-bottom: 30px;
+  }
+  .experience__more {
+    margin-top: 60px;
+    margin-bottom: 14px;
+  }
+  #phonics::after,
+  #words::after {
+    width: 2044px;
+    height: 1053px;
+  }
+  #phonics::after {
+    left: calc(50% - 800px);
+    bottom: -300px;
+  }
+  #words::after {
+    left: calc(50% + 800px);
+    bottom: -380px;
+  }
+  .learning-card__category {
+    font-size: 11px;
+  }
+  .learning-card__title {
+    font-size: 22px;
+  }
+  .learning-card__description {
+    font-size: 14px;
+  }
+  .learning-card__link {
+    font-size: 14px;
+  }
+  .quick-wrap {
+    right: 5px;
+  }
+  .quick-menu__item {
+    font-size: 11px;
+  }
+  .cta-section {
+    padding: 70px 0px 140px;
+  }
+  .cta-section__inner {
+    max-width: 900px;
+  }
+  .cta-section__title {
+    font-size: 46px;
+  }
+  .cta-section__button {
+    font-size: 18px;
+  }
+  .cta-section__description {
+    font-size: 20px;
+  }
+  .bottom-banner {
+    width: 900px;
+  }
+  .bottom-banner__title {
+    font-size: 18px;
+  }
+  .bottom-banner__link {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero__stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 720px;
+  }
+  .hero__visual--movie {
+    width: 220px;
+    margin-left: -420px;
+    top: 160px;
+  }
+  .hero__visual--book {
+    width: 260px;
+    margin-left: -500px;
+    top: 350px;
+  }
+  .hero__visual--game {
+    width: 140px;
+    margin-left: 160px;
+    top: 40px;
+  }
+  .hero__visual--studio {
+    width: 200px;
+    margin-left: 300px;
+    top: 200px;
+  }
+  .level {
+    padding: 60px 0px 220px;
+  }
+  .level::after {
+    left: calc(50% - 80px);
+    bottom: -390px;
+    width: 2676px;
+    height: 1288px;
+  }
+  .level__header {
+    margin-bottom: 50px;
+  }
+  .level__inner {
+    max-width: 800px;
+  }
+  .level__description {
+    margin: 6px 0 0;
+  }
+  .level-card {
+    min-height: 380px;
+    border-radius: 26px;
+  }
+  .level-card__description {
+    font-size: 12px;
+  }
+  .level-card__image {
+    height: 120px;
+  }
+  .experience {
+    padding: 60px 0px 60px;
+  }
+  .experience__inner {
+    max-width: 800px;
+  }
+  .experience__more {
+    margin-top: 40px;
+  }
+  .learning-card {
+    border-radius: 26px;
+  }
+  .learning-card__content {
+    padding: 22px 0px 26px;
+  }
+  .learning-card__link span {
+    width: 12px;
+  }
+  .learning-card__category {
+    margin-bottom: 4px;
+  }
+  .quick-wrap {
+    gap: 10px;
+  }
+  .quick-menu {
+    border-radius: 18px;
+  }
+  .quick-menu__item {
+    gap: 0px;
+    width: 60px;
+    padding: 8px 2px;
+    border-radius: 16px;
+  }
+  .quick-top {
+    width: 34px;
+    height: 34px;
+  }
+  .quick-top img {
+    width: 16px;
+    height: 16px;
+  }
+  .cta-section {
+    padding: 60px 0px 140px;
+  }
+  .cta-section__inner {
+    max-width: 800px;
+  }
+  .cta-section__button {
+    min-width: 280px;
+    min-height: 65px;
+  }
+  .bottom-banner {
+    width: 800px;
+    height: 70px;
+  }
+  .bottom-banner__item {
+    padding: 0 30px;
+    border-radius: 20px 20px 0 0;
+  }
+  .bottom-banner__text {
+    gap: 2px;
+  }
+  .bottom-banner__character {
+    max-height: 80px;
+    right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 720px;
+  }
+  .hero__visual--movie {
+    width: 110px;
+    margin-left: -180px;
+    top: 120px;
+  }
+  .hero__visual--book {
+    width: 100px;
+    margin-left: -200px;
+    top: 210px;
+  }
+  .hero__visual--game {
+    width: 70px;
+    margin-left: 80px;
+    top: 50px;
+  }
+  .hero__visual--studio {
+    width: 100px;
+    margin-left: 110px;
+    top: 120px;
+  }
+  .hero__keywords {
+    margin-top: 24px;
+    gap: 3px;
+  }
+  .hero__keyword {
+    padding: 0px 10px;
+    min-height: 30px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+  .hero__description {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .hero__cta {
+    min-height: 60px;
+    gap: 8px;
+    font-size: 16px;
+    min-width: calc(100% - 160px);
+  }
+  .hero__cta-icon {
+    width: 20px;
+  }
+  .hero__caption {
+    font-size: 13px;
+  }
+  .hero__title-main, .hero__title-gradient {
+    font-size: 40px;
+  }
+  .hero__title-main {
+    margin-bottom: 4px;
+  }
+  .level {
+    padding: 80px 24px 80px;
+  }
+  .level::after {
+    left: calc(50% - 30px);
+    bottom: -210px;
+    width: 800px;
+    height: 606px;
+  }
+  .level__header {
+    margin-bottom: 30px;
+  }
+  .level__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .level__title {
+    font-size: 26px;
+  }
+  .level__description {
+    line-height: 1.28;
+    margin: 6px 0 0;
+    font-size: 16px;
+  }
+  .level-card {
+    min-height: 340px;
+  }
+  .level-card__label {
+    min-width: 100px;
+    font-size: 11px;
+  }
+  .level-card__title {
+    font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 22px;
+  }
+  .level-card__image {
+    height: 120px;
+  }
+  .level-card__description {
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+  .level-card__link {
+    font-size: 14px;
+  }
+  .level-card__link span img {
+    width: 14px;
+  }
+  .experience {
+    padding: 80px 0 80px;
+  }
+  .experience__cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 0 24px;
+  }
+  .experience__more {
+    margin: 40px 24px 0;
+  }
+  .experience__rail::before, .experience__rail::after {
+    width: 76px;
+    top: -15px;
+  }
+  .experience__rail-set img {
+    border-radius: 6px;
+    width: 90px;
+  }
+  .experience__title {
+    font-size: 26px;
+  }
+  .experience__description {
+    font-size: 16px;
+    margin: 2px 0 0;
+  }
+  .experience__rail {
+    margin-top: 14px;
+  }
+  .experience__more-title {
+    font-size: 18px;
+  }
+  #phonics::after,
+  #words::after {
+    width: 1022px;
+    height: 526px;
+  }
+  #phonics::after {
+    left: calc(50% - 800px);
+    bottom: -300px;
+  }
+  #words::after {
+    left: calc(50% + 800px);
+    bottom: -380px;
+  }
+  .learning-card__category {
+    font-size: 11px;
+  }
+  .learning-card__title {
+    font-size: 18px;
+  }
+  .learning-card__description {
+    font-size: 14px;
+  }
+  .learning-card__link {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+  .quick-wrap {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease, opacity 0.25s ease, visibility 0.35s;
+  }
+  .quick-wrap.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .quick-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 6px;
+    border-radius: 100px;
+  }
+  .quick-menu__item {
+    flex: 1;
+    flex-direction: row;
+    height: 40px;
+    gap: 5px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .quick-menu__item span {
+    width: 100%;
+    padding-right: 13px;
+  }
+  .quick-menu__item img {
+    width: 38px;
+    height: 38px;
+  }
+  .quick-top {
+    display: none;
+  }
+  .cta-section {
+    padding: 60px 0px 120px;
+  }
+  .cta-section__button {
+    margin-top: 24px;
+  }
+  .cta-section__title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .cta-section__button {
+    font-size: 16px;
+    min-width: calc(100% - 160px);
+    min-height: 60px;
+    gap: 10px;
+  }
+  .cta-section__button img {
+    width: 20px;
+  }
+  .cta-section__visual {
+    width: calc(100% - 48px);
+  }
+  .cta-section__description {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .cta-section__description strong {
+    font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .bottom-banner {
+    width: 100%;
+    height: 50px;
+  }
+  .bottom-banner__item {
+    justify-content: center;
+    padding: 0 10px;
+  }
+  .bottom-banner__item img {
+    display: none;
+  }
+  .bottom-banner__text {
+    text-align: center;
+  }
+  .bottom-banner__link {
+    display: none;
+  }
+  .bottom-banner__title {
+    margin-top: 0px;
+    line-height: 1.3;
+    font-size: 13px;
+    padding-top: 3px;
+  }
+}

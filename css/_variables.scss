@@ -1,0 +1,151 @@
+// ==============================
+// Color
+// ==============================
+
+// Brand
+$color-primary: #4930ef;
+$color-primary-dark: #3f23dc;
+
+// Point
+$color-blue: #367af5;
+$color-purple: #6444f5;
+$color-purple-gradation: linear-gradient(
+  90deg,
+  #7b68ff,
+  #d9d3ff
+);
+
+$color-pink: #e0528d;
+$color-orange: #f58b17;
+
+// Text
+$color-text-main: #111;
+$color-text-body: #333;
+$color-text-sub: #4d4d4d;
+$color-white: #fff;
+
+// Background
+$color-bg-center: #cfdefa;
+$color-bg-middle: #cfdefa;
+$color-bg-sub: #d2cbfb;
+$color-bg-edge: #d2cbfb;
+
+// Keyword
+$color-keyword: #745af6;
+$color-keyword-point: $color-orange;
+
+// Effect
+$color-orbit: rgba($color-white, 0.6);
+$color-shadow: rgba($color-primary, 0.25);
+
+// ==============================
+// Breakpoint
+// ==============================
+
+$desktop: 1440px;
+$laptop: 1200px;
+$tablet: 1024px;
+$mobile: 768px;
+
+// ==============================
+// Common
+// ==============================
+
+$radius-sm: 8px;
+$radius-full: 999px;
+$transition: 0.25s ease;
+
+$blank: 130px;
+$desktop-blank: 100px;
+$laptop-blank: 70px;
+$tablet-blank: 60px;
+$mobile-blank: 80px;
+
+
+$title-xl: 68px; 
+$title-lg: 56px;
+$title-md: 40px;
+$title-sm:30px;
+$title-xsm:26px;
+$title-xxsm:20px;
+$text-lg:24px;
+$text-md:20px;
+$text-sm:16px;
+$text-xsm:14px;
+$text-xxsm:12px;
+
+//$laptop
+$laptop-title-xl: 56px;
+$laptop-title-lg: 46px;
+$laptop-title-md: 36px;
+$laptop-title-sm:24px;
+$laptop-title-xsm:22px;
+$laptop-title-xxsm:18px;
+$laptop-text-lg:20px;
+$laptop-text-md:18px;
+$laptop-text-sm:14px;
+$laptop-text-xsm:13px;
+$laptop-text-xxsm:11px;
+
+//$mobile
+$mobile-title-xl: 40px;
+$mobile-title-lg: 28px;
+$mobile-title-md: 26px;
+$mobile-title-sm:22px;
+$mobile-title-xsm:18px;
+$mobile-title-xxsm:16px;
+$mobile-text-lg:16px;
+//$mobile-text-md:15px;
+$mobile-text-sm:14px;
+$mobile-text-xsm:13px;
+$mobile-text-xxsm:11px;
+
+
+
+
+$content-width:1160px;
+$desktop-content-width:1000px;
+$laptop-content-width:900px;
+$tablet-content-width:800px;
+
+
+// ==============================
+// Font
+// ==============================
+
+$font-light:
+  "NanumSquareNeoLight",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-regular:
+  "NanumSquareNeo",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-bold:
+  "NanumSquareNeoBold",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-extra-bold:
+  "NanumSquareNeoExtraBold",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+$font-heavy:
+  "NanumSquareNeoHeavy",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+
