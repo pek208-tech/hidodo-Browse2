@@ -11,7 +11,8 @@ const quickItems = document.querySelectorAll(
 
 const topButtons = document.querySelectorAll(".quick-top");
 
-const mobileTopButton = document.querySelector(".quick-top.mo-only");
+const signupBanner = document.querySelector(".signup-banner");
+
 
 const firstExperience = sections[0];
 
@@ -85,25 +86,34 @@ const updateQuickMenu = () => {
   const firstRect = firstExperience.getBoundingClientRect();
   const ctaRect = ctaSection?.getBoundingClientRect();
 
+  const showPoint = window.innerHeight * 0.6;
+
   const isCtaInView =
     ctaRect &&
     ctaRect.top < window.innerHeight * 0.4;
 
-  // CTA 구간에서는 둘 다 숨김
-  if (isCtaInView) {
-    quickWrap.classList.remove("is-visible");
-    mobileTopButton?.classList.remove("is-visible");
-    return;
-  }
 
-  const showPoint = window.innerHeight * 0.6;
-
-  if (firstRect.top <= showPoint) {
+  // 퀵메뉴만 CTA에서 숨김
+  if (firstRect.top <= showPoint && !isCtaInView) {
     quickWrap.classList.add("is-visible");
-    mobileTopButton?.classList.add("is-visible");
   } else {
     quickWrap.classList.remove("is-visible");
-    mobileTopButton?.classList.remove("is-visible");
+  }
+
+
+  // TOP 버튼 + 가입 배너는 계속 유지
+  if (firstRect.top <= showPoint) {
+    topButtons.forEach((button) => {
+      button.classList.add("is-visible");
+    });
+
+    signupBanner?.classList.add("is-visible");
+  } else {
+    topButtons.forEach((button) => {
+      button.classList.remove("is-visible");
+    });
+
+    signupBanner?.classList.remove("is-visible");
   }
 };
 
