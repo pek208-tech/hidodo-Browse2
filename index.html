@@ -40,6 +40,78 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/main.js" defer></script>
     <script src="./js/animation.js" defer></script>
+    <script src="./js/playing-experience.js"></script>
+    <style>
+        .experience-modal {
+            display: none;
+
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 24px;
+            box-sizing: border-box;
+
+            background: rgba(0, 0, 0, 0.75);
+        }
+
+        .experience-modal.open {
+            display: flex;
+        }
+
+        .experience-dialog {
+            position: relative;
+
+            width: min(1280px, 100%);
+            aspect-ratio: 16 / 9;
+
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        .experience-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .experience-frame {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            border: 0;
+        }
+
+        .experience-close-button {
+            position: absolute;
+            top: -42px;
+            right: 0;
+
+            padding: 8px 14px;
+
+            border: 0;
+            border-radius: 4px;
+
+            background: #fff;
+            color: #111;
+
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .experience-modal {
+                padding: 12px;
+            }
+        }
+    </style>
   </head>
 
   <body>
@@ -469,15 +541,23 @@
                     </p>
 
                     <a
-                      href="https://experience.dodonfriends.com/paint/"
+                      href="#"
                       class="learning-card__link"
-                      target="_blank"
-                    >
+                     data-url="https://experience.dodonfriends.com/paint/"
+                          onclick="openExperience(this.dataset.url)"
+                    > 
+                   <!--  <button
+                          type="button"
+                          class="learning-card__link"
+                          data-url="https://experience.dodonfriends.com/paint/"
+                          onclick="openExperience(this.dataset.url)"
+                      > -->
                       직접 해보기
                       <span aria-hidden="true"
                         ><img src="./images/arrow_black.svg" alt=""
                       /></span>
-                    </a>
+                      <!-- </button> -->
+                   </a> 
                   </div>
                 </article>
               </li>
@@ -1007,6 +1087,29 @@
           </span>
         </div>
       </a>
+    </div>
+
+    <div
+        id="experience-modal"
+        class="experience-modal"
+        onclick="handleBackdropClick(event)"
+    >
+        <div class="experience-dialog">
+
+            <button
+                type="button"
+                class="experience-close-button"
+                onclick="closeExperience()"
+            >
+                닫기
+            </button>
+
+            <div
+                id="experience-container"
+                class="experience-container"
+            ></div>
+
+        </div>
     </div>
 
     <!-- 나중에 삭제할 예정 -->
