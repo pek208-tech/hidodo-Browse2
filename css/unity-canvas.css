@@ -56,11 +56,12 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
-    padding: 16px;
+    padding: 0px;
   }
+
   .experience-modal {
     padding: 12px;
   }
-}
+} */
