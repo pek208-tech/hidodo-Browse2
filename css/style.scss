@@ -11,18 +11,6 @@
   box-sizing: border-box;
 }
 
-a,
-button,
-[role='button'],
-input[type='button'],
-input[type='submit'] {
-  -webkit-tap-highlight-color: transparent;
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
-}
-
 html {
   font-size: $title-sm;
 }
@@ -1296,9 +1284,6 @@ a {
     }
   }
 }
-------------------------------
-
-
 
 .signup-banner {
   position: fixed;
@@ -1554,7 +1539,7 @@ a {
     }
   }
   .signup-banner {
-    width: $desktop-content-width;
+    width: min($desktop-content-width, 100%);
   }
 }
 
@@ -1760,7 +1745,7 @@ a {
   }
 
   .signup-banner {
-    width: $laptop-content-width
+    width: min($laptop-content-width, 100%);
     &__title {
       font-size: $laptop-title-sm;
     }
@@ -2194,19 +2179,5 @@ a {
     &__button {
       display: none;
     }
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    transform: translateY(-6px);
-  }
-
-  .button:hover {
-    background-color: #333;
-  }
-
-  .quick-menu__item:hover {
-    color: #fff;
   }
 }

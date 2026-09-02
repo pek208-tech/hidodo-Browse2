@@ -232,21 +232,6 @@ global-nav-bar-mo {
   box-sizing: border-box;
 }
 
-a,
-button,
-[role=button],
-input[type=button],
-input[type=submit] {
-  -webkit-tap-highlight-color: transparent;
-}
-a:focus:not(:focus-visible),
-button:focus:not(:focus-visible),
-[role=button]:focus:not(:focus-visible),
-input[type=button]:focus:not(:focus-visible),
-input[type=submit]:focus:not(:focus-visible) {
-  outline: none;
-}
-
 html {
   font-size: 30px;
 }
@@ -1173,7 +1158,7 @@ a {
   font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
------------------------------- .signup-banner {
+.signup-banner {
   position: fixed;
   z-index: 9999;
   left: 50%;
@@ -1185,13 +1170,13 @@ a {
   transform: translate(-50%, 100%);
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
 }
------------------------------- .signup-banner.is-visible {
+.signup-banner.is-visible {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translate(-50%, 0);
 }
------------------------------- .signup-banner__link {
+.signup-banner__link {
   display: block;
   width: 100%;
   height: 80px;
@@ -1201,7 +1186,7 @@ a {
   border-radius: 40px 40px 0 0;
   overflow: visible;
 }
------------------------------- .signup-banner__inner {
+.signup-banner__inner {
   position: relative;
   display: flex;
   align-items: center;
@@ -1209,7 +1194,7 @@ a {
   width: 100%;
   height: 100%;
 }
------------------------------- .signup-banner__title {
+.signup-banner__title {
   margin: 0;
   padding-top: 9px;
   font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -1218,15 +1203,15 @@ a {
   letter-spacing: -2px;
   white-space: nowrap;
 }
------------------------------- .signup-banner__title strong {
+.signup-banner__title strong {
   color: #fff27a;
 }
------------------------------- .signup-banner__character {
+.signup-banner__character {
   width: 130px;
   height: auto;
   margin: -20px 10px 0;
 }
------------------------------- .signup-banner__button {
+.signup-banner__button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1361,7 +1346,7 @@ a {
     max-width: 1000px;
   }
   .signup-banner {
-    width: 1000px;
+    width: min(1000px, 100%);
   }
 }
 @media (max-width: 1200px) {
@@ -1539,8 +1524,10 @@ a {
     font-size: 20px;
   }
   .signup-banner {
-    width: 900px .signup-banner __title;
-    width-font-size: 24px;
+    width: min(900px, 100%);
+  }
+  .signup-banner__title {
+    font-size: 24px;
   }
 }
 @media (max-width: 1024px) {
@@ -1910,16 +1897,5 @@ a {
   }
   .signup-banner__button {
     display: none;
-  }
-}
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    transform: translateY(-6px);
-  }
-  .button:hover {
-    background-color: #333;
-  }
-  .quick-menu__item:hover {
-    color: #fff;
   }
 }
