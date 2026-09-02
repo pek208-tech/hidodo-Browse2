@@ -938,6 +938,29 @@ a {
   outline-offset: 5px;
   border-radius: 4px;
 }
+.learning-card__link2 {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: #111;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+}
+.learning-card__link2 span {
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+.learning-card__link2:hover span {
+  transform: translateX(4px);
+}
+.learning-card__link2:focus-visible {
+  outline: 3px solid rgba(54, 122, 245, 0.4);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
 
 .blue-shadow {
   box-shadow: 0 8px 24px #d9e3fd;

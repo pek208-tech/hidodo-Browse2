@@ -1,0 +1,66 @@
+#unity-container,
+#unity-canvas {
+  border-radius: 50px;
+}
+
+#unity-container {
+  overflow: hidden;
+}
+
+.experience-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.experience-modal.open {
+  display: flex;
+}
+
+.experience-dialog {
+  position: relative;
+  width: min(1280px, 100%);
+  aspect-ratio: 16/9;
+  background: #000;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.experience-container {
+  width: 100%;
+  height: 100%;
+}
+
+.experience-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.experience-close-button {
+  position: absolute;
+  border: 0;
+  background: transparent;
+  top: -70px;
+  right: -6px;
+  width: 60px;
+  border: 0;
+  border-radius: 4px;
+  color: #111;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+  .experience-modal {
+    padding: 12px;
+  }
+}

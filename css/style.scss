@@ -961,6 +961,31 @@ a {
       border-radius: 4px;
     }
   }
+  &__link2 {
+    border: 0;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    color: $color-text-main;
+    font-family: $font-bold;
+    font-size: $text-sm;
+    span {
+      font-size: $text-md;
+      transition: transform $transition;
+    }
+
+    &:hover span {
+      transform: translateX(4px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid rgba($color-blue, 0.4);
+      outline-offset: 5px;
+      border-radius: 4px;
+    }
+  }
 }
 .blue-shadow {
   box-shadow: 0 8px 24px #d9e3fd;
@@ -1322,12 +1347,7 @@ a {
     color: #fff;
     text-decoration: none;
 
-    background: linear-gradient(
-      100deg,
-      #d93b8d 0%,
-      #b22ba7 48%,
-      #6f20ce 100%
-    );
+    background: linear-gradient(100deg, #d93b8d 0%, #b22ba7 48%, #6f20ce 100%);
 
     border-radius: 40px 40px 0 0;
     overflow: visible;
@@ -1529,7 +1549,7 @@ a {
   .quick-wrap {
     right: 10px;
   }
-  .quick-top{
+  .quick-top {
     right: 20px;
   }
   .cta-section {
@@ -2121,7 +2141,7 @@ a {
       }
     }
   }
-  .quick-top{
+  .quick-top {
     bottom: 70px;
   }
 
@@ -2154,7 +2174,6 @@ a {
       }
     }
   }
-
 
   .signup-banner {
     width: 100%;
