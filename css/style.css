@@ -1,3 +1,231 @@
+.global-nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.global-nav-bar .gnb-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: 1160px;
+  height: 100%;
+  margin: 0 auto;
+}
+.global-nav-bar .group1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.global-nav-bar .group1 .logo {
+  display: block;
+  width: 138px;
+  height: 46px;
+  background-image: url("https://gohidodo.com/images/logo/hi_dodo_logo.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  cursor: pointer;
+}
+.global-nav-bar .group2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 54px;
+}
+.global-nav-bar .group2 .gnb-item a {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  color: #222;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.global-nav-bar .group2 .gnb-item a:hover {
+  color: #6b46e5;
+}
+.global-nav-bar .group3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+.global-nav-bar .group3 > span {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.global-nav-bar .group3 .link {
+  color: #333;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.global-nav-bar .group3 .link:hover {
+  color: #6444f5;
+}
+.global-nav-bar .group3 .d-none {
+  display: none;
+}
+.global-nav-bar .btn-group {
+  display: flex;
+  align-items: center;
+}
+.global-nav-bar .btn-group .app-download {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 38px;
+  padding: 0 19px;
+  border: 0;
+  border-radius: 999px;
+  outline: 0;
+  color: #fff;
+  background: #e74c9b;
+  font-family: "NanumSquareNeoBold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.global-nav-bar .btn-group .app-download:hover {
+  transform: translateY(-2px);
+  background: #d83d8c;
+  box-shadow: 0 8px 18px rgba(227, 60, 141, 0.3);
+}
+
+global-nav-bar {
+  display: block;
+}
+
+global-nav-bar-mo {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .global-nav-bar .gnb-container {
+    max-width: 1000px;
+  }
+  .global-nav-bar .group2 {
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  global-nav-bar {
+    display: none;
+  }
+  global-nav-bar-mo {
+    display: block;
+  }
+}
+.global-nav-bar-mo {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 72px;
+  background-color: #fff;
+  border-top: 1px solid #e5e8ec;
+}
+.global-nav-bar-mo .gnb-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+.global-nav-bar-mo .group1 {
+  display: flex;
+  align-items: center;
+}
+.global-nav-bar-mo .group1 .logo {
+  display: block;
+  width: 104px;
+  height: 48px;
+  background-image: url("https://gohidodo.com/images/logo/hi_dodo_logo.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+.global-nav-bar-mo .group2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.global-nav-bar-mo #menuicon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.global-nav-bar-mo label[for=menuicon] {
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+}
+.global-nav-bar-mo label[for=menuicon] span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #242424;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.global-nav-bar-mo #menuicon:checked + label span:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+.global-nav-bar-mo #menuicon:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+.global-nav-bar-mo #menuicon:checked + label span:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+.global-nav-bar-mo .sidebar {
+  position: fixed;
+  top: 72px;
+  right: -100%;
+  z-index: 1050;
+  width: min(320px, 85%);
+  height: calc(100dvh - 72px);
+  padding: 28px 24px;
+  background-color: #fff;
+  transition: right 0.3s ease;
+}
+.global-nav-bar-mo .black-back {
+  position: fixed;
+  inset: 72px 0 0;
+  z-index: 1040;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+.global-nav-bar-mo #menuicon:checked ~ .sidebar {
+  right: 0;
+}
+.global-nav-bar-mo #menuicon:checked ~ .black-back {
+  visibility: visible;
+  opacity: 1;
+}
+
 *,
 *::before,
 *::after {
@@ -13,6 +241,7 @@ body {
   color: #111;
   background: #fff;
   font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -829,6 +1058,39 @@ a {
   outline-offset: 4px;
 }
 
+.quick-top.pc-only {
+  display: flex;
+}
+
+.quick-top.mo-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .quick-top.pc-only {
+    display: none;
+  }
+  .quick-top.mo-only {
+    display: flex;
+    position: fixed;
+    right: 16px;
+    bottom: 70px;
+    width: 48px;
+    height: 48px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 1000;
+  }
+  .quick-top.mo-only.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
 .cta-section {
   position: relative;
   display: flex;
@@ -1008,6 +1270,59 @@ a {
   transform: translateX(4px);
 }
 
+.signup-banner {
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 0;
+  width: min(1200px, 100%);
+  transform: translateX(-50%);
+}
+.signup-banner__link {
+  display: block;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(100deg, #d93b8d 0%, #b22ba7 48%, #6f20ce 100%);
+  border-radius: 40px 40px 0 0;
+  overflow: visible;
+}
+.signup-banner__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.signup-banner__title {
+  margin: 0;
+  padding-top: 9px;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+.signup-banner__title strong {
+  color: #fff27a;
+}
+.signup-banner__character {
+  width: 130px;
+  height: auto;
+  margin: -20px 10px 0;
+}
+.signup-banner__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 @keyframes rail-scroll {
   from {
     transform: translateX(0);
@@ -1131,6 +1446,9 @@ a {
   }
   .bottom-banner {
     width: 1000px;
+  }
+  .signup-banner {
+    width: min(1000px, 100%);
   }
 }
 @media (max-width: 1200px) {
@@ -1315,6 +1633,12 @@ a {
   }
   .bottom-banner__link {
     font-size: 13px;
+  }
+  .signup-banner {
+    width: min(900px, 100%);
+  }
+  .signup-banner__title {
+    font-size: 24px;
   }
 }
 @media (max-width: 1024px) {
@@ -1521,8 +1845,12 @@ a {
     margin: 6px 0 0;
     font-size: 16px;
   }
+  .level__item {
+    cursor: pointer;
+  }
   .level-card {
     min-height: 340px;
+    cursor: pointer;
   }
   .level-card__label {
     min-width: 100px;
@@ -1642,7 +1970,12 @@ a {
     height: 38px;
   }
   .quick-top {
-    display: none;
+    position: fixed;
+    right: 16px;
+    bottom: 90px;
+    left: auto;
+    top: auto;
+    z-index: 1000;
   }
   .cta-section {
     padding: 60px 0px 120px;
@@ -1695,5 +2028,27 @@ a {
     line-height: 1.3;
     font-size: 13px;
     padding-top: 3px;
+  }
+  .signup-banner {
+    width: 100%;
+  }
+  .signup-banner__link {
+    height: 60px;
+  }
+  .signup-banner__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  .signup-banner__title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .signup-banner__character {
+    width: 110px;
+    margin: 0px 10px 0;
+  }
+  .signup-banner__button {
+    display: none;
   }
 }

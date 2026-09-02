@@ -42,6 +42,10 @@
   </head>
 
   <body>
+    <!-- 나중에 삭제할 예정 -->
+    <global-nav-bar></global-nav-bar>
+    <global-nav-bar-mo></global-nav-bar-mo>
+
     <!-- ==============================
         Main
       =============================== -->
@@ -257,7 +261,10 @@
           </div>
 
           <ul class="level__list">
-            <li class="level__item level__item--alphabet">
+            <li
+              class="level__item level__item--alphabet"
+              data-target="alphabet"
+            >
               <article class="level-card">
                 <span class="level-card__label">ALPHABET</span>
 
@@ -288,7 +295,7 @@
               </article>
             </li>
 
-            <li class="level__item level__item--phonics">
+            <li class="level__item level__item--phonics" data-target="phonics">
               <article class="level-card">
                 <span class="level-card__label">PHONICS</span>
 
@@ -320,7 +327,7 @@
               </article>
             </li>
 
-            <li class="level__item level__item--words">
+            <li class="level__item level__item--words" data-target="words">
               <article class="level-card">
                 <span class="level-card__label">WORDS</span>
 
@@ -916,18 +923,25 @@
 
         <button
           type="button"
-          class="quick-top"
+          class="quick-top pc-only"
           aria-label="페이지 상단으로 이동"
         >
           <img src="images/icon_top.svg" alt="" />
         </button>
       </div>
+      <button
+        type="button"
+        class="quick-top mo-only"
+        aria-label="페이지 상단으로 이동"
+      >
+        <img src="images/icon_top.svg" alt="" />
+      </button>
     </main>
 
     <!-- ==============================
         bottom-banner
       =============================== -->
-    <nav class="bottom-banner">
+    <!-- <nav class="bottom-banner">
       <a
         href="/signup/"
         class="bottom-banner__item bottom-banner__item--trial"
@@ -979,6 +993,34 @@
           aria-hidden="true"
         />
       </a>
-    </nav>
+    </nav> -->
+
+    <div class="signup-banner">
+      <a href="/signup" class="signup-banner__link" target="_blank">
+        <div class="signup-banner__inner">
+          <p class="signup-banner__title">
+            회원 가입하고
+            <strong>7일 무료 체험하기</strong>
+          </p>
+
+          <img
+            src="./images/dodo_the_broom.png"
+            class="signup-banner__character"
+            alt=""
+          />
+
+          <span class="signup-banner__button">
+            신청 바로 하기
+            <span class="signup-banner__arrow">
+              <img src="./images/white-arrow.svg" alt="">
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 나중에 삭제할 예정 -->
+    <script src="./js/nav-bar.js"></script>
+    <script src="./js/nav-bar-mo.js"></script>
   </body>
 </html>
