@@ -69,6 +69,13 @@
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  .experience-close-button {
+    width: 50px;
+    top: -60px;
+  }
+}
+
 @media (max-width: 768px) {
   .experience-close-button {
     width: 40px;

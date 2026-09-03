@@ -992,7 +992,7 @@ a {
 .quick-wrap {
   position: fixed;
   z-index: 50;
-  top: 50%;
+  top: calc(50% - 140px);
   right: 40px;
   display: flex;
   flex-direction: column;
@@ -1358,6 +1358,7 @@ a {
   }
   .quick-wrap {
     right: 10px;
+    top: calc(50% - 120px);
   }
   .quick-top {
     right: 20px;
@@ -1451,6 +1452,9 @@ a {
   .level-card__link {
     font-size: 14px;
   }
+  .level-card__link2 {
+    font-size: 14px;
+  }
   .level-card__label {
     padding: 6px 15px;
     font-size: 11px;
@@ -1525,8 +1529,12 @@ a {
   .learning-card__link {
     font-size: 14px;
   }
+  .learning-card__link2 {
+    font-size: 14px;
+  }
   .quick-wrap {
     right: 5px;
+    top: calc(50% - 82px);
   }
   .quick-menu__item {
     font-size: 11px;
@@ -1626,11 +1634,21 @@ a {
   .learning-card__link span {
     width: 12px;
   }
+  .learning-card__link {
+    font-size: 14px;
+  }
+  .learning-card__link2 {
+    font-size: 14px;
+  }
+  .learning-card__link2 span img {
+    width: 12px;
+  }
   .learning-card__category {
     margin-bottom: 4px;
   }
   .quick-wrap {
     gap: 10px;
+    top: calc(50% - 80px);
   }
   .quick-menu {
     border-radius: 18px;
@@ -1904,6 +1922,7 @@ a {
   }
   .signup-banner__link {
     height: 60px;
+    border-radius: 30px 30px 0 0;
   }
   .signup-banner__inner {
     display: flex;
