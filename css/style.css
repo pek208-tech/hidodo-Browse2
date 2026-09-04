@@ -604,13 +604,20 @@ a {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .level__item--alphabet, .level__item--phonics, .level__item--words {
-  box-shadow: 0 22px 45px 5px rgba(0, 0, 0, 0.16);
   border-radius: 36px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .level__item--alphabet:hover, .level__item--phonics:hover, .level__item--words:hover {
   transform: translateY(-6px);
-  box-shadow: 0 32px 64px 10px rgba(0, 0, 0, 0.2);
+}
+.level__item--alphabet:hover {
+  box-shadow: 0 32px 64px 10px rgba(225, 232, 249, 0.8274509804);
+}
+.level__item--phonics:hover {
+  box-shadow: 0 32px 64px 10px rgba(255, 233, 252, 0.862745098);
+}
+.level__item--words:hover {
+  box-shadow: 0 32px 64px 10px rgba(255, 239, 220, 0.9098039216);
 }
 
 .level-card {
@@ -1370,7 +1377,7 @@ a {
     max-width: 1000px;
   }
   .signup-banner {
-    width: min(1000px, 100%);
+    width: 1000px;
   }
 }
 @media (max-width: 1200px) {
@@ -1555,7 +1562,7 @@ a {
     font-size: 20px;
   }
   .signup-banner {
-    width: min(900px, 100%);
+    width: 900px;
   }
   .signup-banner__title {
     font-size: 24px;
@@ -1640,7 +1647,7 @@ a {
   .learning-card__link2 {
     font-size: 14px;
   }
-  .learning-card__link2 span img {
+  .learning-card__link2 span {
     width: 12px;
   }
   .learning-card__category {
@@ -1660,8 +1667,8 @@ a {
     border-radius: 16px;
   }
   .quick-top {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
     right: 12px;
   }
   .quick-top img {
@@ -1677,6 +1684,24 @@ a {
   .cta-section__button {
     min-width: 280px;
     min-height: 65px;
+    margin-top: 30px;
+  }
+  .cta-section__title {
+    line-height: 1.25;
+    font-size: 40px;
+  }
+  .cta-section__description {
+    font-size: 20px;
+  }
+  .cta-section__visual {
+    width: 510px;
+  }
+  .signup-banner {
+    width: 800px;
+    bottom: -8px;
+  }
+  .signup-banner__inner {
+    height: 70px;
   }
 }
 @media (max-width: 768px) {
@@ -1765,7 +1790,7 @@ a {
     cursor: pointer;
   }
   .level-card {
-    min-height: 340px;
+    min-height: 360px;
     cursor: pointer;
   }
   .level-card__label {

@@ -521,7 +521,7 @@ a {
     &--alphabet,
     &--phonics,
     &--words {
-      box-shadow: 0 22px 45px 5px rgba(0, 0, 0, 0.16);
+      //box-shadow: 0 22px 45px 5px rgba(0, 0, 0, 0.16);
       border-radius: 36px;
 
       transition:
@@ -530,8 +530,25 @@ a {
 
       &:hover {
         transform: translateY(-6px);
-        box-shadow: 0 32px 64px 10px rgba(0, 0, 0, 0.2);
       }
+    }
+    &--alphabet{
+      &:hover {
+        box-shadow: 0 32px 64px 10px #e1e8f9d3;
+      }
+
+    }
+    &--phonics{
+      &:hover {
+        box-shadow: 0 32px 64px 10px #ffe9fcdc;
+      }
+
+    }
+    &--words{
+      &:hover {
+        box-shadow: 0 32px 64px 10px #ffefdce8;
+      }
+
     }
   }
 }
@@ -1560,7 +1577,7 @@ a {
     }
   }
   .signup-banner {
-    width: min($desktop-content-width, 100%);
+    width: $desktop-content-width;
   }
 }
 
@@ -1773,7 +1790,7 @@ a {
   }
 
   .signup-banner {
-    width: min($laptop-content-width, 100%);
+    width: $laptop-content-width;
     &__title {
       font-size: $laptop-title-sm;
     }
@@ -1888,8 +1905,8 @@ a {
     }
   }
   .quick-top {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
     right: 12px;
     img {
       width: 16px;
@@ -1904,6 +1921,25 @@ a {
     &__button {
       min-width: 280px;
       min-height: 65px;
+      margin-top: 30px;
+    }
+    &__title{
+      line-height: 1.25;
+      font-size: $tablet-title-lg;
+    }
+    &__description{
+      font-size: $tablet-text-lg;
+    }
+    &__visual{
+      width: 510px;
+
+    }
+  }
+  .signup-banner {
+    width: $tablet-content-width;
+    bottom:-8px;
+    &__inner{
+      height: 70px;
     }
   }
 }
