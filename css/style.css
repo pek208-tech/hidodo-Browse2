@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .global-nav-bar {
   position: sticky;
   top: 0;
@@ -260,6 +261,11 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .pc-only {
   display: block;
 }
@@ -504,7 +510,7 @@ a {
 }
 
 .level {
-  padding: 130px 0px 260px;
+  padding: 240px 0px 260px;
   overflow-x: clip;
   overflow-y: visible;
   isolation: isolate;
@@ -567,6 +573,19 @@ a {
   min-width: 0;
   z-index: 1;
 }
+.level__item .level-card__link {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+.level__item:hover .level-card__link {
+  max-height: 40px;
+  margin-top: 24px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 .level__item--alphabet .level-card {
   border-color: #367af5;
 }
@@ -625,13 +644,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 600px;
-  padding: 62px 32px 40px;
   overflow: hidden;
   border: 2px solid;
   border-radius: 36px;
   background: #fff;
   text-align: center;
+  padding-top: 13px;
 }
 .level-card__label {
   position: absolute;
@@ -668,28 +688,39 @@ a {
   width: 100%;
   height: 260px;
   margin-top: 24px;
+  pointer-events: none;
+}
+.level-card__image object {
+  display: block;
+  width: 300px;
+  height: 210px;
 }
 .level-card__image img {
-  width: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  display: none;
+  width: 100%;
+  height: auto;
+}
+.level-card__motion {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .level-card__link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto;
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
   font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: max-height 0.3s ease, margin-top 0.3s ease, opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
 }
 .level-card__link span {
   font-size: 24px;
   transition: transform 0.25s ease;
-}
-.level-card__link:hover {
-  transform: translateY(-2px);
 }
 .level-card__link:hover span {
   transform: translateX(5px);
@@ -719,7 +750,7 @@ a {
 
 .experience {
   position: relative;
-  padding: 130px 0px 130px;
+  padding: 240px 0px 240px;
   scroll-margin-top: 40px;
   z-index: 3;
 }
@@ -886,87 +917,78 @@ a {
 
 .learning-card {
   overflow: hidden;
-  border-radius: 30px;
-  background: #fff;
-}
-.learning-card__thumb {
-  width: 100%;
-  aspect-ratio: 1.8/1;
-  overflow: hidden;
-}
-.learning-card__thumb img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: 32px;
 }
 .learning-card__content {
-  padding: 26px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 182px;
+  width: 100%;
+  margin: 0;
+  padding: 28px 20px 36px;
+  font: inherit;
+  color: inherit;
   text-align: center;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: none;
+  transform: none;
+  min-width: 0;
+  z-index: 1;
+}
+.learning-card__content .learning-card__link {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  max-height: 0;
+  margin-top: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+.learning-card__content:hover .learning-card__link {
+  max-height: 40px;
+  margin-top: 24px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 .learning-card__category {
-  display: block;
-  margin-bottom: 6px;
-  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 12px;
+  color: #367af5;
 }
 .learning-card__title {
-  margin: 0;
-  color: #111;
-  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 26px;
   line-height: 1.3;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111;
+  padding: 4px 0 8px;
 }
 .learning-card__description {
-  margin: 7px 0 0;
-  color: #4d4d4d;
-  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #666;
 }
 .learning-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 24px;
+  font-size: 16px;
   color: #111;
   font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
-}
-.learning-card__link span {
-  font-size: 20px;
-  transition: transform 0.25s ease;
-}
-.learning-card__link:hover span {
-  transform: translateX(4px);
-}
-.learning-card__link:focus-visible {
-  outline: 3px solid rgba(54, 122, 245, 0.4);
-  outline-offset: 5px;
-  border-radius: 4px;
-}
-.learning-card__link2 {
-  border: 0;
-  background: transparent;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   margin-top: 24px;
-  color: #111;
-  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
+  display: flex;
+  gap: 8px;
 }
-.learning-card__link2 span {
-  font-size: 20px;
-  transition: transform 0.25s ease;
+.learning-card__pink {
+  color: #e0528d;
 }
-.learning-card__link2:hover span {
-  transform: translateX(4px);
-}
-.learning-card__link2:focus-visible {
-  outline: 3px solid rgba(54, 122, 245, 0.4);
-  outline-offset: 5px;
-  border-radius: 4px;
+.learning-card__orange {
+  color: #f58b17;
 }
 
 .blue-shadow {
@@ -994,6 +1016,91 @@ a {
 .orange-shadow:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 32px #ffefdc;
+}
+
+.experience__rail-set img {
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.78;
+}
+.experience__rail-set img:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.rail-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+.rail-preview.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.25s ease, visibility 0s;
+}
+.rail-preview.is-open .rail-preview__inner {
+  transform: scale(1);
+}
+.rail-preview__inner {
+  position: relative;
+  width: min(720px, 90vw);
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+.rail-preview__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+.rail-preview__close {
+  position: absolute;
+  top: -60px;
+  right: 0px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.rail-preview__close:hover, .rail-preview__close:active, .rail-preview__close:focus:not(:focus-visible) {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+.rail-preview__close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  border-radius: 50%;
+}
+.rail-preview__close img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .quick-wrap {
@@ -1096,7 +1203,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 130px 0px 180px;
+  padding: 240px 0px 180px;
   overflow: hidden;
   z-index: 3;
   background: radial-gradient(circle at 50% 18%, rgb(43, 21, 191) 0%, rgb(29, 19, 105) 38%, rgb(27, 27, 34) 72%, rgb(30, 30, 30) 100%);
@@ -1328,15 +1435,36 @@ a {
   .level__description {
     margin: 10px 0 0;
   }
+  .level__item .level-card__link {
+    max-height: 40px;
+    margin-top: 24px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
   .level__list {
     gap: 20px;
   }
   .level-card {
     min-height: 520px;
+    gap: 5px;
+  }
+  .level-card__title {
+    padding-top: 0px;
   }
   .level-card__image {
-    height: 180px;
-    margin-top: 28px;
+    height: auto;
+  }
+  .level-card__image object {
+    display: none;
+  }
+  .level-card__image img {
+    display: block;
+    width: auto;
+    height: 150px;
+  }
+  .level-card__link {
+    padding-bottom: 0px;
   }
   .experience {
     padding: 100px 0px 100px;
@@ -1349,6 +1477,17 @@ a {
   }
   .experience__cards {
     gap: 18px;
+  }
+  .learning-card__content .learning-card__link {
+    max-height: 40px;
+    margin-top: 24px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .learning-card__link img {
+    height: 15px;
+    padding-top: 1px;
   }
   #phonics::after,
   #words::after {
@@ -1378,6 +1517,12 @@ a {
   }
   .signup-banner {
     width: 1000px;
+  }
+  .rail-preview__inner {
+    width: 1000px;
+  }
+  .rail-preview__close {
+    top: -70px;
   }
 }
 @media (max-width: 1200px) {
@@ -1447,7 +1592,6 @@ a {
     min-height: 460px;
   }
   .level-card__image {
-    height: 160px;
     margin-top: 10px;
   }
   .level-card__title {
@@ -1459,8 +1603,9 @@ a {
   .level-card__link {
     font-size: 14px;
   }
-  .level-card__link2 {
-    font-size: 14px;
+  .level-card__link img {
+    height: 12px;
+    padding-top: 2px;
   }
   .level-card__label {
     padding: 6px 15px;
@@ -1536,6 +1681,10 @@ a {
   .learning-card__link {
     font-size: 14px;
   }
+  .learning-card__link img {
+    height: 14px;
+    padding-top: 2px;
+  }
   .learning-card__link2 {
     font-size: 14px;
   }
@@ -1566,6 +1715,14 @@ a {
   }
   .signup-banner__title {
     font-size: 24px;
+  }
+  .rail-preview__inner {
+    width: 900px;
+  }
+  .rail-preview__close {
+    top: -60px;
+    width: 38px;
+    height: 38px;
   }
 }
 @media (max-width: 1024px) {
@@ -1620,8 +1777,14 @@ a {
   .level-card__description {
     font-size: 12px;
   }
-  .level-card__image {
-    height: 120px;
+  .level-card__title {
+    padding-top: 10px;
+  }
+  .level-card__image img {
+    height: 110px;
+  }
+  .level-card__link {
+    padding-bottom: 10px;
   }
   .experience {
     padding: 60px 0px 60px;
@@ -1641,14 +1804,12 @@ a {
   .learning-card__link span {
     width: 12px;
   }
+  .learning-card__link img {
+    height: 12px;
+    padding-top: 2px;
+  }
   .learning-card__link {
     font-size: 14px;
-  }
-  .learning-card__link2 {
-    font-size: 14px;
-  }
-  .learning-card__link2 span {
-    width: 12px;
   }
   .learning-card__category {
     margin-bottom: 4px;
@@ -1702,6 +1863,9 @@ a {
   }
   .signup-banner__inner {
     height: 70px;
+  }
+  .rail-preview__inner {
+    width: 800px;
   }
 }
 @media (max-width: 768px) {
@@ -1802,7 +1966,11 @@ a {
     font-size: 22px;
   }
   .level-card__image {
-    height: 120px;
+    padding-top: 30px;
+    height: 130px;
+  }
+  .level-card__image img {
+    height: 130px;
   }
   .level-card__description {
     margin: 8px 0 0;
@@ -1964,5 +2132,44 @@ a {
   }
   .signup-banner__button {
     display: none;
+  }
+  /* .rail-preview {
+    padding: 0px;
+    &__inner {
+      width: calc(100% - 48px);
+    }
+    &__image {
+      border-radius: 20px;
+    }
+  } */
+}
+/* 모바일 세로 */
+@media (max-width: 768px) and (orientation: portrait) {
+  .rail-preview__inner {
+    width: 88vw;
+  }
+  .rail-preview__image {
+    border-radius: 20px;
+  }
+}
+/* 모바일 가로 */
+@media (max-height: 768px) and (orientation: landscape) {
+  .rail-preview__inner {
+    width: min(60vw, 900px);
+  }
+  .rail-preview__image {
+    border-radius: 20px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .learning-card:hover .learning-card__content {
+    padding-top: 28px;
+  }
+  .learning-card:hover .learning-card__link {
+    max-height: 40px;
+    margin-top: 24px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 }

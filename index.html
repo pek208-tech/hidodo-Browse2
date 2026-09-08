@@ -42,13 +42,12 @@
     <script src="./js/main.js" defer></script>
     <script src="./js/animation.js" defer></script>
     <script src="./js/playing-experience.js"></script>
-
   </head>
 
   <body>
     <!-- 나중에 삭제할 예정 -->
-    <!-- <global-nav-bar></global-nav-bar>
-    <global-nav-bar-mo></global-nav-bar-mo> -->
+    <global-nav-bar></global-nav-bar>
+    <global-nav-bar-mo></global-nav-bar-mo>
 
     <!-- ==============================
         Main
@@ -265,103 +264,118 @@
           </div>
 
           <ul class="level__list">
-            <li
-              class="level__item level__item--alphabet"
-              data-target="alphabet"
-            >
-              <article class="level-card">
+            <li class="level__item level__item--alphabet">
+              <a href="#alphabet" class="level-card">
                 <span class="level-card__label">ALPHABET</span>
 
                 <h3 class="level-card__title">
-                  영어를<br class="pc-only" />이제 시작해요.
+                  영어를<br class="pc-only" />
+                  이제 시작해요.
                 </h3>
 
                 <p class="level-card__description">
-                  알파벳이 아직 낯설다면,<br>
-                  A, B, C부터 영어소리와 <br class="pc-only">
-                   친해져요.
+                  알파벳이 아직 낯설다면,<br />
+                  A, B, C부터 <br class="pc-only" />영어소리와 친해져요.
                 </p>
 
                 <div class="level-card__image">
+                  <object
+                    class="level-card__motion"
+                    type="image/svg+xml"
+                    data="./images/alphabet.svg"
+                    aria-label="알파벳 캐릭터"
+                  ></object>
+
                   <img
+                    class="level-card__final"
                     src="./images/level-alphabet.png"
-                    alt="알파벳 A를 보고 있는 캐릭터"
-                    width="240"
-                    height="240"
+                    alt="알파벳 캐릭터"
                   />
                 </div>
 
-                <a href="#alphabet" class="level-card__link">
+                <span class="level-card__link">
                   알파벳 둘러보기
-                  <span aria-hidden="true"
-                    ><img src="./images/arrow.svg" alt=""
-                  /></span>
-                </a>
-              </article>
+                  <span aria-hidden="true">
+                    <img src="./images/arrow.svg" alt="" />
+                  </span>
+                </span>
+              </a>
             </li>
 
             <li class="level__item level__item--phonics" data-target="phonics">
-              <article class="level-card">
+              <a href="#phonics" class="level-card">
                 <span class="level-card__label">PHONICS</span>
 
                 <h3 class="level-card__title">
-                  알파벳과<br class="pc-only" />조금 친해요.
+                  알파벳과<br class="pc-only" />
+                  조금 친해요.
                 </h3>
 
                 <p class="level-card__description">
-                  몇몇 알파벳을 알고 있다면,<br>
-                  글자와 소리를 연결하며<br class="pc-only"> 
+                  몇몇 알파벳을 알고 있다면,<br />
+                  글자와 소리를 연결하며<br class="pc-only" />
                   읽기의 기초를 익혀요.
                 </p>
 
                 <div class="level-card__image">
+                  <object
+                    class="level-card__motion"
+                    type="image/svg+xml"
+                    data="./images/phonics.svg"
+                    aria-label="파닉스 캐릭터"
+                  ></object>
                   <img
+                    class="level-card__final"
                     src="./images/level-phonics.png"
-                    alt="알파벳 A, B, C를 들고 있는 캐릭터"
-                    width="240"
-                    height="240"
+                    alt="파닉스 캐릭터"
                   />
                 </div>
 
-                <a href="#phonics" class="level-card__link">
+                <span class="level-card__link">
                   파닉스 둘러보기
-                  <span aria-hidden="true"
-                    ><img src="./images/arrow_pink.svg" alt=""
-                  /></span>
-                </a>
-              </article>
+                  <span aria-hidden="true">
+                    <img src="./images/arrow_pink.svg" alt="" />
+                  </span>
+                </span>
+              </a>
             </li>
 
             <li class="level__item level__item--words" data-target="words">
-              <article class="level-card">
-                <span class="level-card__label">WORDS</span>
+              <a href="#words" class="level-card">
+                <span class="level-card__label">PHONICS</span>
 
                 <h3 class="level-card__title">
-                  쉬운 단어를<br class="pc-only" />읽을 수 있어요.
+                  쉬운 단어를<br class="pc-only" />
+                  읽을 수 있어요.
                 </h3>
 
                 <p class="level-card__description">
                   익숙한 단어를 읽을 수 있다면,<br />
-                  자주 쓰는 단어와 짧은 문장으로 <br class="pc-only"> 
+                  자주 쓰는 단어와 짧은 문장으로 <br class="pc-only" />
                   확장해요.
                 </p>
 
                 <div class="level-card__image">
+                  <object
+                    class="level-card__motion"
+                    type="image/svg+xml"
+                    data="./images/word.svg"
+                    aria-label="파닉스 캐릭터"
+                  ></object>
                   <img
+                    class="level-card__final"
                     src="./images/level-words.png"
-                    alt="영어 단어가 있는 책을 읽는 캐릭터"
-                    width="240"
-                    height="240"
+                    alt="파닉스 캐릭터"
                   />
                 </div>
 
-                <a href="#words" class="level-card__link">
-                  워드 둘러보기
-                  <span aria-hidden="true"
-                    ><img src="./images/arrow_orange.svg" alt=""
-                  /></span>
-                </a>
-              </article>
+                <span class="level-card__link">
+                  파닉스 둘러보기
+                  <span aria-hidden="true">
+                    <img src="./images/arrow_orange.svg" alt="" />
+                  </span>
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -393,98 +407,121 @@
             <ul class="experience__cards">
               <li>
                 <article class="learning-card blue-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
+                      class="learning-card__image"
                       src="./images/alphabet-baking.png"
-                      alt="알파벳 A 모양을 따라 그리는 고마의 홈베이킹 학습 화면"
+                      data-static="./images/alphabet-baking.png"
+                      data-gif="./images/alphabet-baking.gif"
+                      alt="고마의 홈베이킹 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category blue"> 액티비티 </span>
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category"> 액티비티 </span>
 
-                    <h4 class="learning-card__title">고마의 홈베이킹</h4>
+                    <strong class="learning-card__title">
+                      고마의 홈베이킹
+                    </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       알파벳 모양을 익혀요.
-                    </p>
-                    <a
-                      href="https://experience.dodonfriends.com/homebaking/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
-                      직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
+                    </span>
 
-                  </div>
+                    <span class="learning-card__link">
+                      직접 해보기
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
-
               <li>
                 <article class="learning-card blue-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
-                      src="./images/alphabet-popcorn.png"
-                      alt="알파벳 소리를 구별하는 터져라 팝콘 학습 화면"
+                      class="learning-card__image"
+                      src="./images/dodo-village.png"
+                      data-static="./images/dodo-village.png"
+                      data-gif="./images/dodo-village.gif"
+                      alt="도도빌리지 그림 대회 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category blue"> 액티비티 </span>
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category"> 액티비티 </span>
 
-                    <h4 class="learning-card__title">터져라 팝콘</h4>
+                    <strong class="learning-card__title"> 도도빌리지 그림 대회 </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       알파벳 소리를 구별해요.
-                    </p>
+                    </span>
 
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
-                  </div>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
-
               <li>
                 <article class="learning-card blue-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
+                      class="learning-card__image"
                       src="./images/alphabet-icecream.png"
-                      alt="대문자와 소문자를 구분하는 아이스크림 학습 화면"
+                      data-static="./images/alphabet-icecream.png"
+                      data-gif="./images/alphabet-icecream.gif"
+                      alt="아이스크림 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category blue"> 게임 </span>
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category"> 게임 </span>
 
-                    <h4 class="learning-card__title">아이스크림</h4>
+                    <strong class="learning-card__title"> 아이스크림 </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       대·소문자를 구분해요.
-                    </p>
+                    </span>
 
-                    <button
-                      type="button"
-                      class="learning-card__link2"
-                      data-url="https://experience.dodonfriends.com/paint/"
-                      onclick="openExperience(this.dataset.url)"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </button>
-                  </div>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
             </ul>
@@ -499,39 +536,35 @@
           <div class="experience__rail">
             <div class="experience__rail-track">
               <div class="experience__rail-set">
-                <img src="./images/thumb-01.png" alt="" />
-                <img src="./images/thumb-02.png" alt="" />
-                <img src="./images/thumb-03.png" alt="" />
-                <img src="./images/thumb-04.png" alt="" />
-                <img src="./images/thumb-05.png" alt="" />
-                <img src="./images/thumb-06.png" alt="" />
-                <img src="./images/thumb-07.png" alt="" />
+                <img src="./images/thumb-01.png" data-gif="./images/thumb-01.png"  alt="" />
+                <img src="./images/thumb-02.png" data-gif="./images/thumb-02.png"  alt="" />
+                <img src="./images/thumb-03.png" data-gif="./images/thumb-03.png"  alt="" />
+                <img src="./images/thumb-04.png" data-gif="./images/thumb-04.png"  alt="" />
+                <img src="./images/thumb-06.png" data-gif="./images/thumb-06.png"  alt="" />
+                <img src="./images/thumb-07.png" data-gif="./images/thumb-07.png"  alt="" />
 
-                <img src="./images/thumb-01.png" alt="" />
-                <img src="./images/thumb-02.png" alt="" />
-                <img src="./images/thumb-03.png" alt="" />
-                <img src="./images/thumb-04.png" alt="" />
-                <img src="./images/thumb-05.png" alt="" />
-                <img src="./images/thumb-06.png" alt="" />
-                <img src="./images/thumb-07.png" alt="" />
+                <img src="./images/thumb-01.png" data-gif="./images/thumb-01.png"  alt="" />
+                <img src="./images/thumb-02.png" data-gif="./images/thumb-02.png"  alt="" />
+                <img src="./images/thumb-03.png" data-gif="./images/thumb-03.png"  alt="" />
+                <img src="./images/thumb-04.png" data-gif="./images/thumb-04.png"  alt="" />
+                <img src="./images/thumb-06.png" data-gif="./images/thumb-06.png"  alt="" />
+                <img src="./images/thumb-07.png" data-gif="./images/thumb-07.png"  alt="" />
               </div>
 
               <div class="experience__rail-set second-line">
-                <img src="./images/thumb-01.png" alt="" />
-                <img src="./images/thumb-02.png" alt="" />
-                <img src="./images/thumb-03.png" alt="" />
-                <img src="./images/thumb-04.png" alt="" />
-                <img src="./images/thumb-05.png" alt="" />
-                <img src="./images/thumb-06.png" alt="" />
-                <img src="./images/thumb-07.png" alt="" />
+                <img src="./images/thumb-01.png" data-gif="./images/thumb-01.png"  alt="" />
+                <img src="./images/thumb-02.png" data-gif="./images/thumb-02.png"  alt="" />
+                <img src="./images/thumb-03.png" data-gif="./images/thumb-03.png"  alt="" />
+                <img src="./images/thumb-04.png" data-gif="./images/thumb-04.png"  alt="" />
+                <img src="./images/thumb-06.png" data-gif="./images/thumb-06.png"  alt="" />
+                <img src="./images/thumb-07.png" data-gif="./images/thumb-07.png"  alt="" />
 
-                <img src="./images/thumb-01.png" alt="" />
-                <img src="./images/thumb-02.png" alt="" />
-                <img src="./images/thumb-03.png" alt="" />
-                <img src="./images/thumb-04.png" alt="" />
-                <img src="./images/thumb-05.png" alt="" />
-                <img src="./images/thumb-06.png" alt="" />
-                <img src="./images/thumb-07.png" alt="" />
+                <img src="./images/thumb-01.png" data-gif="./images/thumb-01.png"  alt="" />
+                <img src="./images/thumb-02.png" data-gif="./images/thumb-02.png"  alt="" />
+                <img src="./images/thumb-03.png" data-gif="./images/thumb-03.png"  alt="" />
+                <img src="./images/thumb-04.png" data-gif="./images/thumb-04.png"  alt="" />
+                <img src="./images/thumb-06.png" data-gif="./images/thumb-06.png"  alt="" />
+                <img src="./images/thumb-07.png" data-gif="./images/thumb-07.png"  alt="" />
               </div>
             </div>
           </div>
@@ -557,97 +590,127 @@
             <ul class="experience__cards">
               <li>
                 <article class="learning-card pink-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
+                      class="learning-card__image"
                       src="./images/phonics-broken_popcorn_car.png"
-                      alt="알파벳을 선택해 소리를 구별하는 망가진 팝콘카 활동 화면"
+                      data-static="./images/phonics-broken_popcorn_car.png"
+                      data-gif="./images/phonics-broken_popcorn_car.gif"
+                      alt="망가진 팝콘카 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category pink"> 액티비티 </span>
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category learning-card__pink">
+                      액티비티
+                    </span>
 
-                    <h4 class="learning-card__title">망가진 팝콘카</h4>
+                    <strong class="learning-card__title">
+                      망가진 팝콘카
+                    </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       알파벳 소리를 구별해요.
-                    </p>
+                    </span>
 
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
-                  </div>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
-
               <li>
                 <article class="learning-card pink-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
+                      class="learning-card__image"
                       src="./images/phonics-kingdoms-flower-garden.png"
-                      alt="알파벳이 적힌 꽃을 선택하며 글자와 소리를 연결하는 활동 화면"
+                      data-static="./images/phonics-kingdoms-flower-garden.png"
+                      data-gif="./images/phonics-kingdoms-flower-garden.gif"
+                      alt="왕국의 꽃밭 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category pink"> 액티비티 </span>
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category learning-card__pink">
+                      액티비티
+                    </span>
 
-                    <h4 class="learning-card__title">왕국의 꽃밭</h4>
+                    <strong class="learning-card__title"> 왕국의 꽃밭 </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       글자와 소리를 연결해요.
-                    </p>
+                    </span>
 
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
-                  </div>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
-
               <li>
                 <article class="learning-card pink-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
+                      class="learning-card__image"
                       src="./images/phonics-cellos-stage.png"
-                      alt="단어의 첫소리를 선택하며 학습하는 첼로의 무대 게임 화면"
+                      data-static="./images/alphabet-baking.png"
+                      data-gif="./images/alphabet-baking.gif"
+                      alt="첼로의 무대 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category pink"> 게임 </span>
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category learning-card__pink">
+                      게임
+                    </span>
 
-                    <h4 class="learning-card__title">첼로의 무대</h4>
+                    <strong class="learning-card__title"> 첼로의 무대 </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       단어의 첫소리를 익혀요.
-                    </p>
+                    </span>
 
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
-                  </div>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
             </ul>
@@ -662,50 +725,50 @@
           <div class="experience__rail" aria-hidden="true">
             <div class="experience__rail-track">
               <div class="experience__rail-set">
-                <img src="./images/phonics-thurmnail-01.png" alt="" />
-                <img src="./images/phonics-thurmnail-02.png" alt="" />
-                <img src="./images/phonics-thurmnail-03.png" alt="" />
-                <img src="./images/phonics-thurmnail-04.png" alt="" />
-                <img src="./images/phonics-thurmnail-05.png" alt="" />
-                <img src="./images/phonics-thurmnail-06.png" alt="" />
-                <img src="./images/phonics-thurmnail-07.png" alt="" />
-                <img src="./images/phonics-thurmnail-08.png" alt="" />
-                <img src="./images/phonics-thurmnail-09.png" alt="" />
-                <img src="./images/phonics-thurmnail-10.png" alt="" />
+                <img src="./images/phonics-thurmnail-01.png" data-gif="./images/phonics-thurmnail-01.png" alt="" />
+                <img src="./images/phonics-thurmnail-02.png" data-gif="./images/phonics-thurmnail-02.png" alt="" />
+                <img src="./images/phonics-thurmnail-03.png" data-gif="./images/phonics-thurmnail-03.png" alt="" />
+                <img src="./images/phonics-thurmnail-04.png" data-gif="./images/phonics-thurmnail-04.png" alt="" />
+                <img src="./images/phonics-thurmnail-05.png" data-gif="./images/phonics-thurmnail-05.png" alt="" />
+                <img src="./images/phonics-thurmnail-06.png" data-gif="./images/phonics-thurmnail-06.png" alt="" />
+                <img src="./images/phonics-thurmnail-07.png" data-gif="./images/phonics-thurmnail-07.png" alt="" />
+                <img src="./images/phonics-thurmnail-08.png" data-gif="./images/phonics-thurmnail-08.png" alt="" />
+                <img src="./images/phonics-thurmnail-09.png" data-gif="./images/phonics-thurmnail-09.png" alt="" />
+                <img src="./images/phonics-thurmnail-10.png" data-gif="./images/phonics-thurmnail-10.png" alt="" />
 
-                <img src="./images/phonics-thurmnail-01.png" alt="" />
-                <img src="./images/phonics-thurmnail-02.png" alt="" />
-                <img src="./images/phonics-thurmnail-03.png" alt="" />
-                <img src="./images/phonics-thurmnail-04.png" alt="" />
-                <img src="./images/phonics-thurmnail-05.png" alt="" />
-                <img src="./images/phonics-thurmnail-06.png" alt="" />
-                <img src="./images/phonics-thurmnail-07.png" alt="" />
-                <img src="./images/phonics-thurmnail-08.png" alt="" />
-                <img src="./images/phonics-thurmnail-09.png" alt="" />
-                <img src="./images/phonics-thurmnail-10.png" alt="" />
+                <img src="./images/phonics-thurmnail-01.png" data-gif="./images/phonics-thurmnail-01.png" alt="" />
+                <img src="./images/phonics-thurmnail-02.png" data-gif="./images/phonics-thurmnail-02.png" alt="" />
+                <img src="./images/phonics-thurmnail-03.png" data-gif="./images/phonics-thurmnail-03.png" alt="" />
+                <img src="./images/phonics-thurmnail-04.png" data-gif="./images/phonics-thurmnail-04.png" alt="" />
+                <img src="./images/phonics-thurmnail-05.png" data-gif="./images/phonics-thurmnail-05.png" alt="" />
+                <img src="./images/phonics-thurmnail-06.png" data-gif="./images/phonics-thurmnail-06.png" alt="" />
+                <img src="./images/phonics-thurmnail-07.png" data-gif="./images/phonics-thurmnail-07.png" alt="" />
+                <img src="./images/phonics-thurmnail-08.png" data-gif="./images/phonics-thurmnail-08.png" alt="" />
+                <img src="./images/phonics-thurmnail-09.png" data-gif="./images/phonics-thurmnail-09.png" alt="" />
+                <img src="./images/phonics-thurmnail-10.png" data-gif="./images/phonics-thurmnail-10.png" alt="" />
               </div>
               <div class="experience__rail-set second-line">
-                <img src="./images/phonics-thurmnail-01.png" alt="" />
-                <img src="./images/phonics-thurmnail-02.png" alt="" />
-                <img src="./images/phonics-thurmnail-03.png" alt="" />
-                <img src="./images/phonics-thurmnail-04.png" alt="" />
-                <img src="./images/phonics-thurmnail-05.png" alt="" />
-                <img src="./images/phonics-thurmnail-06.png" alt="" />
-                <img src="./images/phonics-thurmnail-07.png" alt="" />
-                <img src="./images/phonics-thurmnail-08.png" alt="" />
-                <img src="./images/phonics-thurmnail-09.png" alt="" />
-                <img src="./images/phonics-thurmnail-10.png" alt="" />
+                <img src="./images/phonics-thurmnail-01.png" data-gif="./images/phonics-thurmnail-01.png" alt="" />
+                <img src="./images/phonics-thurmnail-02.png" data-gif="./images/phonics-thurmnail-02.png" alt="" />
+                <img src="./images/phonics-thurmnail-03.png" data-gif="./images/phonics-thurmnail-03.png" alt="" />
+                <img src="./images/phonics-thurmnail-04.png" data-gif="./images/phonics-thurmnail-04.png" alt="" />
+                <img src="./images/phonics-thurmnail-05.png" data-gif="./images/phonics-thurmnail-05.png" alt="" />
+                <img src="./images/phonics-thurmnail-06.png" data-gif="./images/phonics-thurmnail-06.png" alt="" />
+                <img src="./images/phonics-thurmnail-07.png" data-gif="./images/phonics-thurmnail-07.png" alt="" />
+                <img src="./images/phonics-thurmnail-08.png" data-gif="./images/phonics-thurmnail-08.png" alt="" />
+                <img src="./images/phonics-thurmnail-09.png" data-gif="./images/phonics-thurmnail-09.png" alt="" />
+                <img src="./images/phonics-thurmnail-10.png" data-gif="./images/phonics-thurmnail-10.png" alt="" />
 
-                <img src="./images/phonics-thurmnail-01.png" alt="" />
-                <img src="./images/phonics-thurmnail-02.png" alt="" />
-                <img src="./images/phonics-thurmnail-03.png" alt="" />
-                <img src="./images/phonics-thurmnail-04.png" alt="" />
-                <img src="./images/phonics-thurmnail-05.png" alt="" />
-                <img src="./images/phonics-thurmnail-06.png" alt="" />
-                <img src="./images/phonics-thurmnail-07.png" alt="" />
-                <img src="./images/phonics-thurmnail-08.png" alt="" />
-                <img src="./images/phonics-thurmnail-09.png" alt="" />
-                <img src="./images/phonics-thurmnail-10.png" alt="" />
+                <img src="./images/phonics-thurmnail-01.png" data-gif="./images/phonics-thurmnail-01.png" alt="" />
+                <img src="./images/phonics-thurmnail-02.png" data-gif="./images/phonics-thurmnail-02.png" alt="" />
+                <img src="./images/phonics-thurmnail-03.png" data-gif="./images/phonics-thurmnail-03.png" alt="" />
+                <img src="./images/phonics-thurmnail-04.png" data-gif="./images/phonics-thurmnail-04.png" alt="" />
+                <img src="./images/phonics-thurmnail-05.png" data-gif="./images/phonics-thurmnail-05.png" alt="" />
+                <img src="./images/phonics-thurmnail-06.png" data-gif="./images/phonics-thurmnail-06.png" alt="" />
+                <img src="./images/phonics-thurmnail-07.png" data-gif="./images/phonics-thurmnail-07.png" alt="" />
+                <img src="./images/phonics-thurmnail-08.png" data-gif="./images/phonics-thurmnail-08.png" alt="" />
+                <img src="./images/phonics-thurmnail-09.png" data-gif="./images/phonics-thurmnail-09.png" alt="" />
+                <img src="./images/phonics-thurmnail-10.png" data-gif="./images/phonics-thurmnail-10.png" alt="" />
               </div>
             </div>
           </div>
@@ -725,101 +788,127 @@
             <ul class="experience__cards">
               <li>
                 <article class="learning-card orange-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
-                      src="./images/word-galaxy_exploration.png"
-                      alt="우주 공간에서 짧은 영어 문장을 읽는 은하 탐험 활동 화면"
+                      class="learning-card__image"
+                      src="./images/word_desert_yoga.png"
+                      data-static="./images/word_desert_yoga.png"
+                      data-gif="./images/word_desert_yoga.gif"
+                      alt="사막 요가 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content">
-                    <span class="learning-card__category orange">
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category learning-card__orange">
                       액티비티
                     </span>
 
-                    <h4 class="learning-card__title">은하 탐험</h4>
+                    <strong class="learning-card__title"> 사막 요가 </strong>
 
-                    <p class="learning-card__description">
+                    <span class="learning-card__description">
                       짧은 문장을 읽어봐요.
-                    </p>
+                    </span>
 
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
-                  </div>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
-
               <li>
                 <article class="learning-card orange-shadow">
-                  <div class="learning-card__thumb">
+                  <div class="learning-card__thumbnail">
                     <img
-                      src="./images/word_lego-maze.png"
-                      alt="영어 단어가 적힌 집을 선택하며 자주 쓰는 단어를 익히는 레고 미로 활동 화면"
+                      class="learning-card__image"
+                      src="./images/pipe_connection.png"
+                      data-static="./images/pipe_connection.png"
+                      data-gif="./images/pipe_connection.gif"
+                      alt="파이프 연결 활동 미리보기"
                     />
                   </div>
 
-                  <div class="learning-card__content orange">
-                    <span class="learning-card__category"> 액티비티 </span>
-
-                    <h4 class="learning-card__title">레고 미로</h4>
-
-                    <p class="learning-card__description">
-                      자주 쓰는 단어를 익혀요.
-                    </p>
-
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
-                      직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
-                  </div>
-                </article>
-              </li>
-
-              <li>
-                <article class="learning-card orange-shadow">
-                  <div class="learning-card__thumb">
-                    <img
-                      src="./images/word_cosmo_racing.png"
-                      alt="영어 단어와 그림의 뜻을 연결하는 코스모 레이싱 활동 화면"
-                    />
-                  </div>
-
-                  <div class="learning-card__content">
-                    <span class="learning-card__category orange">
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category learning-card__orange">
                       액티비티
                     </span>
 
-                    <h4 class="learning-card__title">코스모 레이싱</h4>
+                    <strong class="learning-card__title"> 파이프 연결 </strong>
 
-                    <p class="learning-card__description">
-                      단어의 뜻을 연결해요.
-                    </p>
+                    <span class="learning-card__description">
+                      자주 쓰는 단어를 익혀요.
+                    </span>
 
-                    <a
-                      href="https://experience.dodonfriends.com/paint/"
-                      class="learning-card__link"
-                      target="_blank"
-                    >
+                    <span class="learning-card__link">
                       직접 해보기
-                      <span aria-hidden="true"
-                        ><img src="./images/arrow_black.svg" alt=""
-                      /></span>
-                    </a>
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
+                </article>
+              </li>
+              <li>
+                <article class="learning-card orange-shadow">
+                  <div class="learning-card__thumbnail">
+                    <img
+                      class="learning-card__image"
+                      src="./images/unknown-desert.png"
+                      data-static="./images/unknown-desert.png"
+                      data-gif="./images/unknown-desert.gif"
+                      alt="미지의 사막으로 활동 미리보기"
+                    />
                   </div>
+
+                  <!-- 아래 영역만 클릭 가능 -->
+                  <button
+                    type="button"
+                    class="learning-card__content"
+                    data-url="https://experience.dodonfriends.com/paint/"
+                    onclick="openExperience(this.dataset.url)"
+                  >
+                    <span class="learning-card__category learning-card__orange">
+                      액티비티</span
+                    >
+
+                    <strong class="learning-card__title">
+                      미지의 사막으로
+                    </strong>
+
+                    <span class="learning-card__description">
+                      단어의 뜻을 연결해요.
+                    </span>
+
+                    <span class="learning-card__link">
+                      직접 해보기
+
+                      <img
+                        src="./images/arrow_black.svg"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </button>
                 </article>
               </li>
             </ul>
@@ -834,38 +923,38 @@
           <div class="experience__rail" aria-hidden="true">
             <div class="experience__rail-track">
               <div class="experience__rail-set">
-                <img src="./images/word-thurmnail-01.png" alt="" />
-                <img src="./images/word-thurmnail-02.png" alt="" />
-                <img src="./images/word-thurmnail-03.png" alt="" />
-                <img src="./images/word-thurmnail-04.png" alt="" />
-                <img src="./images/word-thurmnail-05.png" alt="" />
-                <img src="./images/word-thurmnail-06.png" alt="" />
-                <img src="./images/word-thurmnail-07.png" alt="" />
+                <img src="./images/word-thurmnail-01.png" data-gif="./images/word-thurmnail-01.png"  alt="" />
+                <img src="./images/word-thurmnail-02.png" data-gif="./images/word-thurmnail-02.png"  alt="" />
+                <img src="./images/word-thurmnail-03.png" data-gif="./images/word-thurmnail-03.png"  alt="" />
+                <img src="./images/word-thurmnail-04.png" data-gif="./images/word-thurmnail-04.png"  alt="" />
+                <img src="./images/word-thurmnail-05.png" data-gif="./images/word-thurmnail-05.png"  alt="" />
+                <img src="./images/word-thurmnail-06.png" data-gif="./images/word-thurmnail-06.png"  alt="" />
+                <img src="./images/word-thurmnail-07.png" data-gif="./images/word-thurmnail-07.png"  alt="" />
 
-                <img src="./images/word-thurmnail-01.png" alt="" />
-                <img src="./images/word-thurmnail-02.png" alt="" />
-                <img src="./images/word-thurmnail-03.png" alt="" />
-                <img src="./images/word-thurmnail-04.png" alt="" />
-                <img src="./images/word-thurmnail-05.png" alt="" />
-                <img src="./images/word-thurmnail-06.png" alt="" />
-                <img src="./images/word-thurmnail-07.png" alt="" />
+                <img src="./images/word-thurmnail-01.png" data-gif="./images/word-thurmnail-01.png"  alt="" />
+                <img src="./images/word-thurmnail-02.png" data-gif="./images/word-thurmnail-02.png"  alt="" />
+                <img src="./images/word-thurmnail-03.png" data-gif="./images/word-thurmnail-03.png"  alt="" />
+                <img src="./images/word-thurmnail-04.png" data-gif="./images/word-thurmnail-04.png"  alt="" />
+                <img src="./images/word-thurmnail-05.png" data-gif="./images/word-thurmnail-05.png"  alt="" />
+                <img src="./images/word-thurmnail-06.png" data-gif="./images/word-thurmnail-06.png"  alt="" />
+                <img src="./images/word-thurmnail-07.png" data-gif="./images/word-thurmnail-07.png"  alt="" />
               </div>
               <div class="experience__rail-set second-line">
-                <img src="./images/word-thurmnail-01.png" alt="" />
-                <img src="./images/word-thurmnail-02.png" alt="" />
-                <img src="./images/word-thurmnail-03.png" alt="" />
-                <img src="./images/word-thurmnail-04.png" alt="" />
-                <img src="./images/word-thurmnail-05.png" alt="" />
-                <img src="./images/word-thurmnail-06.png" alt="" />
-                <img src="./images/word-thurmnail-07.png" alt="" />
+                <img src="./images/word-thurmnail-01.png" data-gif="./images/word-thurmnail-01.png"  alt="" />
+                <img src="./images/word-thurmnail-02.png" data-gif="./images/word-thurmnail-02.png"  alt="" />
+                <img src="./images/word-thurmnail-03.png" data-gif="./images/word-thurmnail-03.png"  alt="" />
+                <img src="./images/word-thurmnail-04.png" data-gif="./images/word-thurmnail-04.png"  alt="" />
+                <img src="./images/word-thurmnail-05.png" data-gif="./images/word-thurmnail-05.png"  alt="" />
+                <img src="./images/word-thurmnail-06.png" data-gif="./images/word-thurmnail-06.png"  alt="" />
+                <img src="./images/word-thurmnail-07.png" data-gif="./images/word-thurmnail-07.png"  alt="" />
 
-                <img src="./images/word-thurmnail-01.png" alt="" />
-                <img src="./images/word-thurmnail-02.png" alt="" />
-                <img src="./images/word-thurmnail-03.png" alt="" />
-                <img src="./images/word-thurmnail-04.png" alt="" />
-                <img src="./images/word-thurmnail-05.png" alt="" />
-                <img src="./images/word-thurmnail-06.png" alt="" />
-                <img src="./images/word-thurmnail-07.png" alt="" />
+                <img src="./images/word-thurmnail-01.png" data-gif="./images/word-thurmnail-01.png"  alt="" />
+                <img src="./images/word-thurmnail-02.png" data-gif="./images/word-thurmnail-02.png"  alt="" />
+                <img src="./images/word-thurmnail-03.png" data-gif="./images/word-thurmnail-03.png"  alt="" />
+                <img src="./images/word-thurmnail-04.png" data-gif="./images/word-thurmnail-04.png"  alt="" />
+                <img src="./images/word-thurmnail-05.png" data-gif="./images/word-thurmnail-05.png"  alt="" />
+                <img src="./images/word-thurmnail-06.png" data-gif="./images/word-thurmnail-06.png"  alt="" />
+                <img src="./images/word-thurmnail-07.png" data-gif="./images/word-thurmnail-07.png"  alt="" />
               </div>
             </div>
           </div>
@@ -883,7 +972,11 @@
             계속 이어가 보세요.
           </h2>
 
-          <a href="https://membership.gohidodo.com/signup_web/?menuName=default" class="cta-section__button" target="_blank">
+          <a
+            href="https://membership.gohidodo.com/signup_web/?menuName=default"
+            class="cta-section__button"
+            target="_blank"
+          >
             <span>7일 무료체험 시작하기</span>
             <span class="cta-section__button-arrow" aria-hidden="true">
               <img src="./images/7days-free-arrow.svg" alt="" />
@@ -892,7 +985,7 @@
 
           <div class="cta-section__visual">
             <img
-              src="./images/hidodo-main-screen.png"
+              src="./images/hidodo-main-screen.gif"
               alt="게임, 무비, 스튜디오, 북, 액티비티 등 하이도도 주요 학습 콘텐츠 화면"
             />
           </div>
@@ -936,62 +1029,13 @@
     <!-- ==============================
         bottom-banner
       =============================== -->
-    <!-- <nav class="bottom-banner">
-      <a
-        href="/signup/"
-        class="bottom-banner__item bottom-banner__item--trial"
-        target="_blank"
-      >
-        <div class="bottom-banner__text">
-          <strong class="bottom-banner__title">
-            회원가입하고<br class="mo-only" /><em> 7일 무료 체험 하기</em>
-          </strong>
-
-          <span class="bottom-banner__link">
-            신청바로가기
-            <span aria-hidden="true"
-              ><img src="./images/sm_arrow_wh.svg" alt=""
-            /></span>
-          </span>
-        </div>
-
-        <img
-          src="./images/banner-character-trial.png"
-          alt=""
-          class="bottom-banner__character"
-          aria-hidden="true"
-        />
-      </a>
-
-      <a
-        href="/trial/"
-        class="bottom-banner__item bottom-banner__item--preview"
-        target="_blank"
-      >
-        <div class="bottom-banner__text">
-          <strong class="bottom-banner__title">
-            <em>하이도도</em> <br class="mo-only" />미리 둘러보기
-          </strong>
-
-          <span class="bottom-banner__link">
-            신청바로가기
-            <span aria-hidden="true"
-              ><img src="./images/sm_arrow_bk.svg" alt=""
-            /></span>
-          </span>
-        </div>
-
-        <img
-          src="./images/banner-character-preview.png"
-          alt=""
-          class="bottom-banner__character"
-          aria-hidden="true"
-        />
-      </a>
-    </nav> -->
 
     <div class="signup-banner">
-      <a href="https://membership.gohidodo.com/signup_web/?menuName=default" class="signup-banner__link" target="_blank">
+      <a
+        href="https://membership.gohidodo.com/signup_web/?menuName=default"
+        class="signup-banner__link"
+        target="_blank"
+      >
         <div class="signup-banner__inner">
           <p class="signup-banner__title">
             회원 가입하고
@@ -1029,6 +1073,24 @@
         </button>
 
         <div id="experience-container" class="experience-container"></div>
+      </div>
+    </div>
+    
+    
+    <!-- ==============================
+       레일 팝업
+      =============================== -->
+    <div class="rail-preview" aria-hidden="true">
+      <div class="rail-preview__inner">
+        <button
+          type="button"
+          class="rail-preview__close"
+          aria-label="미리보기 닫기"
+        >
+          <img src="./images/close.svg" alt="">
+        </button>
+
+        <img class="rail-preview__image" src="./images/alphabet-baking.gif" alt="" />
       </div>
     </div>
 
