@@ -322,3 +322,74 @@ railPreview?.addEventListener("click", (event) => {
 
   closeRailPreview();
 });
+
+
+
+const rails = document.querySelectorAll(".experience__rail");
+
+rails.forEach((rail) => {
+  const track = rail.querySelector(".experience__rail-track");
+
+  if (!track) return;
+
+  rail.addEventListener("pointerenter", () => {
+    track.style.animationPlayState = "paused";
+  });
+
+  rail.addEventListener("pointerleave", () => {
+    // 팝업이 열려있으면 계속 정지
+    const isModalOpen =
+      document.querySelector(".rail-preview")?.classList.contains("is-open");
+
+    if (!isModalOpen) {
+      track.style.animationPlayState = "running";
+    }
+  });
+});
+
+// ------------------------------
+// 직접 해보기 팝업
+// ------------------------------
+
+function openExperience(url) {
+  const experienceModal =
+    document.querySelector("#experience-modal");
+
+  const experienceContainer =
+    document.querySelector("#experience-container");
+
+  experienceContainer.innerHTML = `
+    <iframe
+      src="${url}"
+      class="experience-frame"
+      allow="fullscreen; autoplay; pointer-lock"
+      allowfullscreen
+    ></iframe>
+  `;
+
+  experienceModal.classList.add("open");
+
+  // 직접 해보기 팝업이 열리면 rail 정지
+  railTracks.forEach((track) => {
+    track.style.animationPlayState = "paused";
+  });
+}
+
+
+function closeExperience() {
+  const experienceModal =
+    document.querySelector("#experience-modal");
+
+  const experienceContainer =
+    document.querySelector("#experience-container");
+
+  experienceModal.classList.remove("open");
+
+  experienceContainer.innerHTML = "";
+
+  // 팝업을 닫으면 rail 다시 재생
+  railTracks.forEach((track) => {
+    track.style.animationPlayState = "running";
+  });
+}
+

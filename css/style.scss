@@ -381,7 +381,7 @@ button {
 }
 
 .level {
-  padding: $blank 0px 260px;
+  padding: $blank 0px 240px;
   overflow-x: clip;
   overflow-y: visible;
   isolation: isolate;
@@ -859,11 +859,11 @@ button {
       background: url("../images/gradation-r.png") right center / contain
         no-repeat;
     }
-    &:hover {
+    /* &:hover {
       .experience__rail-track {
         animation-play-state: paused;
       }
-    }
+    } */
   }
 
   &__rail-track {
@@ -945,6 +945,7 @@ button {
     left: calc(50% + 800px);
     bottom: -580px;
     background-image: url("../images/word-bg.png");
+    margin-bottom: $blank;
   }
 }
 
@@ -1152,6 +1153,10 @@ button {
     transform: scale(0.92);
 
     transition: transform 0.25s ease;
+
+    //border: 10px solid rgba(255, 255, 255, 0.644);
+
+    //border-radius: 40px;
   }
 
   &__image {
@@ -1356,7 +1361,7 @@ button {
   align-items: center;
   justify-content: center;
   //min-height: 100svh;
-  padding: $blank 0px 180px;
+  padding: $blank 0px 140px;
   overflow: hidden;
   z-index: 3;
   background: radial-gradient(
@@ -1803,7 +1808,7 @@ button {
   }
   .rail-preview {
     &__inner {
-      width: $desktop-content-width;
+      width: 60vw;
     }
     &__close {
       top: -70px;
@@ -2032,7 +2037,7 @@ button {
 
   .rail-preview {
     &__inner {
-      width: $laptop-content-width;
+      width: 60vw;
     }
     &__close {
       top: -60px;
@@ -2194,7 +2199,7 @@ button {
   }
   .rail-preview {
     &__inner {
-      width: $tablet-content-width;
+      width: 60vw;
     }
   }
 }
@@ -2454,7 +2459,7 @@ button {
     }
   }
   .quick-top {
-    bottom: 70px;
+    bottom: 90px;
   }
 
   .cta-section {
@@ -2498,14 +2503,15 @@ button {
     &__inner {
       display: flex;
       justify-content: space-between;
-      padding: 0 40px;
+      padding: 0 30px;
+      height: 42px;
     }
     &__title {
       font-size: $mobile-title-xxsm;
       line-height: 22px;
     }
     &__character {
-      width: 110px;
+      width: 100px;
       margin: 0px 10px 0;
     }
     &__button {
@@ -2529,7 +2535,7 @@ button {
   .rail-preview {
     &__inner {
       width: 88vw;
-    } 
+    }
     &__image {
       border-radius: 20px;
     }
@@ -2540,8 +2546,8 @@ button {
 @media (max-height: 768px) and (orientation: landscape) {
   .rail-preview {
     &__inner {
-      width: min(60vw, 900px);
-    } 
+      width: 50vw;
+    }
     &__image {
       border-radius: 20px;
     }

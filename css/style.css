@@ -510,7 +510,7 @@ button {
 }
 
 .level {
-  padding: 240px 0px 260px;
+  padding: 140px 0px 240px;
   overflow-x: clip;
   overflow-y: visible;
   isolation: isolate;
@@ -750,7 +750,7 @@ button {
 
 .experience {
   position: relative;
-  padding: 240px 0px 240px;
+  padding: 140px 0px 140px;
   scroll-margin-top: 40px;
   z-index: 3;
 }
@@ -841,8 +841,12 @@ button {
   right: 0;
   background: url("../images/gradation-r.png") right center/contain no-repeat;
 }
-.experience__rail:hover .experience__rail-track {
-  animation-play-state: paused;
+.experience__rail {
+  /* &:hover {
+    .experience__rail-track {
+      animation-play-state: paused;
+    }
+  } */
 }
 .experience__rail-track {
   display: flex;
@@ -907,6 +911,7 @@ button {
   left: calc(50% + 800px);
   bottom: -580px;
   background-image: url("../images/word-bg.png");
+  margin-bottom: 140px;
 }
 
 .level,
@@ -1203,7 +1208,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 240px 0px 180px;
+  padding: 140px 0px 140px;
   overflow: hidden;
   z-index: 3;
   background: radial-gradient(circle at 50% 18%, rgb(43, 21, 191) 0%, rgb(29, 19, 105) 38%, rgb(27, 27, 34) 72%, rgb(30, 30, 30) 100%);
@@ -1519,7 +1524,7 @@ button {
     width: 1000px;
   }
   .rail-preview__inner {
-    width: 1000px;
+    width: 60vw;
   }
   .rail-preview__close {
     top: -70px;
@@ -1717,7 +1722,7 @@ button {
     font-size: 24px;
   }
   .rail-preview__inner {
-    width: 900px;
+    width: 60vw;
   }
   .rail-preview__close {
     top: -60px;
@@ -1865,7 +1870,7 @@ button {
     height: 70px;
   }
   .rail-preview__inner {
-    width: 800px;
+    width: 60vw;
   }
 }
 @media (max-width: 768px) {
@@ -2079,7 +2084,7 @@ button {
     height: 38px;
   }
   .quick-top {
-    bottom: 70px;
+    bottom: 90px;
   }
   .cta-section {
     padding: 60px 0px 120px;
@@ -2120,14 +2125,15 @@ button {
   .signup-banner__inner {
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 30px;
+    height: 42px;
   }
   .signup-banner__title {
     font-size: 16px;
     line-height: 22px;
   }
   .signup-banner__character {
-    width: 110px;
+    width: 100px;
     margin: 0px 10px 0;
   }
   .signup-banner__button {
@@ -2155,7 +2161,7 @@ button {
 /* 모바일 가로 */
 @media (max-height: 768px) and (orientation: landscape) {
   .rail-preview__inner {
-    width: min(60vw, 900px);
+    width: 50vw;
   }
   .rail-preview__image {
     border-radius: 20px;
