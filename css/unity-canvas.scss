@@ -96,10 +96,18 @@
 }
 @media (max-width: $tablet) {
   .experience-dialog {
-    width: 50vw;
-  }
+      width: 70vw;
+    }
+  .experience-close-button {
+      top: 0px;
+      right: -50px;
+      width: 40px;
+      height: 40px;
+    }
 }
 @media (max-width: $mobile) {
+
+  
   .experience-dialog {
     width: 50vw;
     border-radius: 20px;

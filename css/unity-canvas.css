@@ -79,7 +79,13 @@
 }
 @media (max-width: 1024px) {
   .experience-dialog {
-    width: 50vw;
+    width: 70vw;
+  }
+  .experience-close-button {
+    top: 0px;
+    right: -50px;
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 768px) {

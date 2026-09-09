@@ -515,7 +515,7 @@ button {
   overflow-y: visible;
   isolation: isolate;
   position: relative;
-  height: calc(100vh - 97px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -527,7 +527,7 @@ button {
   bottom: -510px;
   width: 2976px;
   height: 1588px;
-  background: url("../images/choose-level-bg.png") center/contain no-repeat;
+  background: url("../images/choose-level-bg.png") center -80px/min(2976px, 100%) auto no-repeat;
   transform: translateX(-50%);
   pointer-events: none;
   z-index: 0;
@@ -757,7 +757,7 @@ button {
   margin: 300px 0px 300px;
   scroll-margin-top: 40px;
   z-index: 3;
-  height: calc(100vh - 97px);
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1216,7 +1216,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 300px 0px 140px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   z-index: 3;
   background: radial-gradient(circle at 50% 18%, rgb(43, 21, 191) 0%, rgb(29, 19, 105) 38%, rgb(27, 27, 34) 72%, rgb(30, 30, 30) 100%);
@@ -1434,7 +1437,7 @@ button {
     top: -220px;
   }
   .level {
-    padding: 100px 0px 240px;
+    height: calc(100vh - 50px);
   }
   .level::after {
     left: calc(50% - 120px);
@@ -1479,11 +1482,11 @@ button {
   .level-card__link {
     padding-bottom: 0px;
   }
-  .experience {
-    padding: 100px 0px 100px;
-  }
   .experience__inner {
     max-width: 1000px;
+  }
+  .experience__rail {
+    min-height: 120px;
   }
   .experience__rail-set img {
     width: 160px;
@@ -1574,9 +1577,6 @@ button {
   .hero__cta {
     font-size: 18px;
   }
-  .level {
-    padding: 70px 0px 240px;
-  }
   .level::after {
     left: calc(50% - 100px);
     bottom: -420px;
@@ -1632,7 +1632,7 @@ button {
     display: none;
   }
   .experience {
-    padding: 70px 0px 70px;
+    height: calc(100vh - 40px);
   }
   .experience__inner {
     max-width: 900px;
@@ -1765,9 +1765,6 @@ button {
     margin-left: 310px;
     top: -150px;
   }
-  .level {
-    padding: 60px 0px 220px;
-  }
   .level::after {
     left: calc(50% - 80px);
     bottom: -390px;
@@ -1798,9 +1795,6 @@ button {
   }
   .level-card__link {
     padding-bottom: 10px;
-  }
-  .experience {
-    padding: 60px 0px 60px;
   }
   .experience__inner {
     max-width: 800px;
@@ -1878,7 +1872,11 @@ button {
     height: 70px;
   }
   .rail-preview__inner {
-    width: 60vw;
+    width: 70vw;
+  }
+  .rail-preview__close {
+    top: 0px;
+    right: -50px;
   }
 }
 @media (max-width: 768px) {
@@ -1941,7 +1939,8 @@ button {
     margin-bottom: 4px;
   }
   .level {
-    padding: 80px 24px 80px;
+    margin: 80px 24px 80px;
+    height: auto;
   }
   .level::after {
     left: calc(50% - 30px);
@@ -1996,7 +1995,8 @@ button {
     width: 14px;
   }
   .experience {
-    padding: 80px 0 80px;
+    margin: 80px 0px 80px;
+    height: auto;
   }
   .experience__cards {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -2178,7 +2178,7 @@ button {
 /* 모바일 가로 */
 @media (max-height: 768px) and (orientation: landscape) {
   .rail-preview__inner {
-    width: 82vw;
+    width: 70vw;
   }
   .rail-preview__image {
     border-radius: 20px;

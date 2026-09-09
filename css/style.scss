@@ -388,7 +388,7 @@ button {
   overflow-y: visible;
   isolation: isolate;
   position: relative;
-  height: calc(100vh - 97px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -401,7 +401,7 @@ button {
     width: 2976px;
     height: 1588px;
 
-    background: url("../images/choose-level-bg.png") center / contain no-repeat;
+    background: url("../images/choose-level-bg.png") center -80px/ min(2976px, 100%) auto no-repeat;
 
     transform: translateX(-50%);
     pointer-events: none;
@@ -750,7 +750,7 @@ button {
   scroll-margin-top: 40px;
   z-index: 3;
 
-  height: calc(100vh - 97px);
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1371,8 +1371,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  //min-height: 100svh;
-  padding: $blank 0px 140px;
+  height: 100vh ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   z-index: 3;
   background: radial-gradient(
@@ -1703,7 +1705,7 @@ button {
     }
   }
   .level {
-    padding: $desktop-blank 0px 240px;
+    height: calc(100vh - 50px);
     &::after {
       left: calc(50% - 120px);
       bottom: -500px;
@@ -1754,10 +1756,12 @@ button {
     }
   }
   .experience {
-    padding: $desktop-blank 0px $desktop-blank;
 
     &__inner {
       max-width: $desktop-content-width;
+    }
+    &__rail{
+      min-height: 120px;
     }
     &__rail-set {
       img {
@@ -1881,7 +1885,6 @@ button {
     }
   }
   .level {
-    padding: $laptop-blank 0px 240px;
 
     &::after {
       left: calc(50% - 100px);
@@ -1942,7 +1945,7 @@ button {
     display: none;
   }
   .experience {
-    padding: $laptop-blank 0px $laptop-blank;
+    height: calc(100vh - 40px);
     &__inner {
       max-width: $laptop-content-width;
     }
@@ -2102,7 +2105,6 @@ button {
     }
   }
   .level {
-    padding: $tablet-blank 0px 220px;
     &::after {
       left: calc(50% - 80px);
       bottom: -390px;
@@ -2138,7 +2140,6 @@ button {
     }
   }
   .experience {
-    padding: $tablet-blank 0px $tablet-blank;
     &__inner {
       max-width: $tablet-content-width;
     }
@@ -2218,7 +2219,11 @@ button {
   }
   .rail-preview {
     &__inner {
-      width: 60vw;
+      width: 70vw;
+    }
+    &__close {
+      top: 0px;
+      right: -50px;
     }
   }
 }
@@ -2293,7 +2298,8 @@ button {
   }
 
   .level {
-    padding: $mobile-blank 24px $mobile-blank;
+    margin: $mobile-blank 24px $mobile-blank;
+    height: auto;
     &::after {
       left: calc(50% - 30px);
       bottom: -210px;
@@ -2352,7 +2358,8 @@ button {
   }
 
   .experience {
-    padding: $mobile-blank 0 $mobile-blank;
+    margin: $mobile-blank 0px $mobile-blank;
+    height: auto;
     &__cards {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       margin: 0 24px;
@@ -2572,7 +2579,7 @@ button {
 @media (max-height: 768px) and (orientation: landscape) {
   .rail-preview {
     &__inner {
-      width: 82vw;
+      width: 70vw;
     }
     &__image {
       border-radius: 20px;
