@@ -116,34 +116,41 @@
   /* 모바일 세로 */
   @media (max-width: 768px) and (orientation: portrait) {
     .experience-dialog {
-      width: 88vw;
+      width: 90vw;
     }
 
     .experience-container {
       width: 100%;
       aspect-ratio: 16 / 9;
+      border: 6px solid #ffffff42;
+      border-radius: 20px;
     }
 
     .experience-close-button {
-      top: -46px;
-      right: 0;
+      top: -50px;
+      right: 0px;
+      width: 40px;
+      height: 40px;
     }
   }
 
   /* 모바일 가로 */
   @media (max-height: 768px) and (orientation: landscape) {
     .experience-dialog {
-      width: 50vw;
+      width: 82vw;
     }
 
     .experience-container {
       width: 100%;
       aspect-ratio: 16 / 9;
+      border-radius: 20px;
     }
 
     .experience-close-button {
-      top: -42px;
-      right: 0;
+      top: 0px;
+      right: -50px;
+      width: 40px;
+      height: 40px;
     }
   }
 }
