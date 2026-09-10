@@ -126,7 +126,7 @@ button {
   &__brand {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   &__logo {
@@ -401,7 +401,8 @@ button {
     width: 2976px;
     height: 1588px;
 
-    background: url("../images/choose-level-bg.png") center -80px/ min(2976px, 100%) auto no-repeat;
+    background: url("../images/choose-level-bg.png") center -80px /
+      min(2976px, 100%) auto no-repeat;
 
     transform: translateX(-50%);
     pointer-events: none;
@@ -823,7 +824,7 @@ button {
   // ------------------------------
 
   &__more {
-    margin-top: 74px;
+    margin-top: 90px;
     margin-bottom: 20px;
   }
 
@@ -845,7 +846,7 @@ button {
 
   &__rail {
     width: 100%;
-    margin-top: 18px;
+    margin-top: 0px;
     overflow: hidden;
     position: relative;
     &::before,
@@ -1371,7 +1372,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh ;
+  height: 100vh;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1484,7 +1486,7 @@ button {
   // ------------------------------
 
   &__visual {
-    width: 642px;
+    width: 560px;
     margin: 52px auto 0;
     img {
       display: block;
@@ -1706,6 +1708,7 @@ button {
   }
   .level {
     height: calc(100vh - 50px);
+    margin: $desktop-blank 0px $desktop-blank;
     &::after {
       left: calc(50% - 120px);
       bottom: -500px;
@@ -1756,11 +1759,11 @@ button {
     }
   }
   .experience {
-
+    margin: $desktop-blank 0px $desktop-blank;
     &__inner {
       max-width: $desktop-content-width;
     }
-    &__rail{
+    &__rail {
       min-height: 120px;
     }
     &__rail-set {
@@ -1821,7 +1824,8 @@ button {
     right: 20px;
   }
   .cta-section {
-    padding: $desktop-blank 0px 140px;
+    padding: $desktop-blank 0px calc($desktop-blank + 96px);
+    height: auto;
     &__inner {
       max-width: $desktop-content-width;
     }
@@ -1846,7 +1850,7 @@ button {
 @media (max-width: $laptop) {
   .hero {
     &__stage {
-      min-height: 780px;
+      min-height: 750px;
     }
     &__visual {
       &--movie {
@@ -1885,7 +1889,9 @@ button {
     }
   }
   .level {
-
+    margin: $laptop-blank 0px $laptop-blank;
+    padding: $laptop-blank 0px $laptop-blank;
+    height: auto;
     &::after {
       left: calc(50% - 100px);
       bottom: -420px;
@@ -1945,7 +1951,9 @@ button {
     display: none;
   }
   .experience {
-    height: calc(100vh - 40px);
+    margin: $laptop-blank 0px $laptop-blank;
+    padding: $laptop-blank 0px $laptop-blank;
+    height: auto;
     &__inner {
       max-width: $laptop-content-width;
     }
@@ -2035,7 +2043,9 @@ button {
     }
   }
   .cta-section {
-    padding: $laptop-blank 0px 140px;
+    margin: $laptop-blank 0px 0px;
+    padding: $laptop-blank 0px calc($laptop-blank + 40px);
+    height: auto;
     &__inner {
       max-width: $laptop-content-width;
     }
@@ -2044,9 +2054,17 @@ button {
     }
     &__button {
       font-size: $laptop-text-md;
+      min-width: 300px;
+      min-height: 60px;
+      margin-top: 20px;
+      padding: 0 24px;
+      gap:10px;
     }
     &__description {
       font-size: $laptop-text-lg;
+    }
+    &__visual {
+      width: 500px;
     }
   }
 
@@ -2105,10 +2123,13 @@ button {
     }
   }
   .level {
+    margin: $tablet-blank 0px $tablet-blank;
+    padding: $tablet-blank 0px $tablet-blank;
+    height: auto;
     &::after {
       left: calc(50% - 80px);
-      bottom: -390px;
-      width: 2676px;
+      bottom: -588px;
+      width: 2096px;
       height: 1288px;
     }
     &__header {
@@ -2140,6 +2161,9 @@ button {
     }
   }
   .experience {
+    margin: $tablet-blank 0px $tablet-blank;
+    padding: $tablet-blank 0px $tablet-blank;
+    height: auto;
     &__inner {
       max-width: $tablet-content-width;
     }
@@ -2190,13 +2214,15 @@ button {
     }
   }
   .cta-section {
-    padding: $tablet-blank 0px 140px;
+    margin: $tablet-blank 0px 0px;
+    padding: $tablet-blank 0px calc($tablet-blank + 50px);
+    height: auto;
     &__inner {
       max-width: $tablet-content-width;
     }
     &__button {
-      min-width: 280px;
-      min-height: 65px;
+      min-width: 272px;
+      min-height: 60px;
       margin-top: 30px;
     }
     &__title {
@@ -2207,7 +2233,7 @@ button {
       font-size: $tablet-text-lg;
     }
     &__visual {
-      width: 510px;
+      width: 480px;
     }
   }
   .signup-banner {
@@ -2298,11 +2324,12 @@ button {
   }
 
   .level {
-    margin: $mobile-blank 24px $mobile-blank;
+    margin: $mobile-blank 0px $mobile-blank;
+    padding: $mobile-blank 24px $mobile-blank;
     height: auto;
     &::after {
       left: calc(50% - 30px);
-      bottom: -210px;
+      bottom: -410px;
       width: 800px;
       height: 606px;
     }
@@ -2358,7 +2385,8 @@ button {
   }
 
   .experience {
-    margin: $mobile-blank 0px $mobile-blank;
+    margin: $mobile-blank 0px 0px;
+    padding: calc($mobile-blank + 30px) 0px 0px;
     height: auto;
     &__cards {
       grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -2485,11 +2513,13 @@ button {
     }
   }
   .quick-top {
-    bottom: 90px;
+    bottom: 80px;
   }
 
   .cta-section {
-    padding: 60px 0px 120px;
+    margin: $mobile-blank 0px 0px ;
+    padding: $mobile-blank 0px calc($mobile-blank + 60px);
+    height: auto;
     &__button {
       margin-top: 24px;
     }
