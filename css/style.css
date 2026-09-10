@@ -300,7 +300,7 @@ button {
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  background: url("../images/hero-bg.png") center/1920px auto no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
+  background: url("../images/resize/hero-bg.png") center/1920px auto no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
 }
 .hero__wrap {
   display: flex;
@@ -918,7 +918,7 @@ button {
 #words::after {
   left: calc(50% + 800px);
   bottom: -580px;
-  background-image: url("../images/word-bg.png");
+  background-image: url("../images/resize/word-bg.png");
   margin-bottom: 300px;
 }
 
@@ -1409,7 +1409,7 @@ button {
 }
 @media (max-width: 1440px) {
   .hero {
-    background: url("../images/hero-bg.png") center/cover no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
+    background: url("../images/resize/hero-bg.png") center/cover no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
   }
   .hero__stage {
     position: relative;

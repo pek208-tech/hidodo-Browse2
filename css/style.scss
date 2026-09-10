@@ -87,7 +87,7 @@ button {
   overflow: hidden;
   width: 100%;
   background:
-    url("../images/hero-bg.png") center / 1920px auto no-repeat,
+    url("../images/resize/hero-bg.png") center / 1920px auto no-repeat,
     linear-gradient(
       90deg,
       rgba($color-bg-center, 1) 0%,
@@ -956,7 +956,7 @@ button {
   &::after {
     left: calc(50% + 800px);
     bottom: -580px;
-    background-image: url("../images/word-bg.png");
+    background-image: url("../images/resize/word-bg.png");
     margin-bottom: $blank;
   }
 }
@@ -1669,7 +1669,7 @@ button {
 @media (max-width: $desktop) {
   .hero {
     background:
-      url("../images/hero-bg.png") center / cover no-repeat,
+      url("../images/resize/hero-bg.png") center / cover no-repeat,
       linear-gradient(
         90deg,
         rgba($color-bg-center, 1) 0%,
